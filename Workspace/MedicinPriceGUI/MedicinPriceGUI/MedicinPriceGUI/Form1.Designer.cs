@@ -31,10 +31,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ReadDataButton = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            progressBar1 = new System.Windows.Forms.ProgressBar();
             this.BrowseButton = new System.Windows.Forms.Button();
             this.updateFiles = new System.Windows.Forms.Button();
             this.toCSV = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusbarLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -67,10 +70,10 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(13, 114);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(259, 23);
-            this.progressBar1.TabIndex = 4;
+            progressBar1.Location = new System.Drawing.Point(13, 114);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new System.Drawing.Size(259, 23);
+            progressBar1.TabIndex = 4;
             // 
             // BrowseButton
             // 
@@ -101,21 +104,40 @@
             this.toCSV.UseVisualStyleBackColor = true;
             this.toCSV.Click += new System.EventHandler(this.toCSV_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusbarLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 239);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(284, 22);
+            this.statusStrip1.TabIndex = 8;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // statusbarLabel
+            // 
+            this.statusbarLabel.Name = "statusbarLabel";
+            this.statusbarLabel.Size = new System.Drawing.Size(118, 17);
+            this.statusbarLabel.Text = "toolStripStatusLabel1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toCSV);
             this.Controls.Add(this.updateFiles);
             this.Controls.Add(this.BrowseButton);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(progressBar1);
             this.Controls.Add(this.ReadDataButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,8 +150,10 @@
         private System.Windows.Forms.Button ReadDataButton;
         private System.Windows.Forms.Button BrowseButton;
         private System.Windows.Forms.Button updateFiles;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        public static System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button toCSV;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel statusbarLabel;
 
 
 

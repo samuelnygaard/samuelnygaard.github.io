@@ -24,7 +24,7 @@ namespace MedicinPriceGUI
         // Lægemiddelform
         static Dictionary<string, string> forms = new Dictionary<string, string>();
 
-        public static void readData(string zipFilePath) 
+        public static void readData(string zipFilePath)
         {
             using (ZipArchive archive = System.IO.Compression.ZipFile.OpenRead(zipFilePath))
             {
@@ -69,7 +69,6 @@ namespace MedicinPriceGUI
                     }
 
                     Form1.updateProgressBar(((i * 100) / t));
-                    //Form1.progressBar1.Value = ((i * 100) / t);
 
                     // Update firms
                     using (StreamReader sr = new StreamReader(archive.GetEntry("lms09.txt").Open(), Encoding.GetEncoding(850)))
@@ -188,6 +187,9 @@ namespace MedicinPriceGUI
 
             tw.WriteLine("DrugID;ATCKode;Varenummer;Navn;Pakning;Styrke;Form;Firma;PrisType" + priceHeader.ToString());
 
+            int i = 0;
+            int j = drugs.Count;
+
             foreach (KeyValuePair<long, Lægemiddel> kv in drugs)
             {
                 StringBuilder drug = new StringBuilder();
@@ -229,6 +231,9 @@ namespace MedicinPriceGUI
                 tw.WriteLine(drug.ToString() + ";esp" + espPrices.ToString());
                 tw.WriteLine(drug.ToString() + ";tsp" + tspPrices.ToString());
                 tw.WriteLine(drug.ToString() + ";lth" + lthPrices.ToString());
+
+                i++;
+                Form1.updateProgressBar(((i * 100) / j));
             }
         }
     }
