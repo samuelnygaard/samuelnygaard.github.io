@@ -7,3 +7,12 @@ C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPric
 C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\obj\Debug\MedicinPriceGUI.csproj.GenerateResource.Cache
 C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\obj\Debug\MedicinPriceGUI.exe
 C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\obj\Debug\MedicinPriceGUI.pdb
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\bin\Debug\Mono.Security.dll
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\bin\Debug\Npgsql.dll
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\bin\Debug\Npgsql.xml
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\bin\Debug\de\Npgsql.resources.dll
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\bin\Debug\es\Npgsql.resources.dll
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\bin\Debug\zh-CN\Npgsql.resources.dll

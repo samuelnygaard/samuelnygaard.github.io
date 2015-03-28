@@ -12,12 +12,15 @@ namespace MedicinPriceGUI
 {
     public partial class Form1 : Form
     {
-        static string newZipFilePath = "C:\\";
+        static string zipFilePath = "C:\\";
 
         public Form1()
         {
             InitializeComponent();
-            textBox1.Text = newZipFilePath;
+            textBox1.Text = zipFilePath;
+            ReadDataButton.Enabled = false;
+            updateFiles.Enabled = false;
+            toCSV.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -25,7 +28,7 @@ namespace MedicinPriceGUI
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BrowseButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog newZipFileDialog = new OpenFileDialog();
             var d = newZipFileDialog;
@@ -36,14 +39,62 @@ namespace MedicinPriceGUI
 
             if (d.ShowDialog() == DialogResult.OK)
             {
-                newZipFilePath = d.FileName;
-                textBox1.Text = newZipFilePath;
+                zipFilePath = d.FileName.ToString();
+                textBox1.Text = zipFilePath;
+                if (zipFilePath.Contains("NYESTE\\lms.zip"))
+                    enableButtons();
+                else disableButtons();
             }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            newZipFilePath = Text;
+            zipFilePath = textBox1.Text;
+            if (zipFilePath.Contains("NYESTE\\lms.zip"))
+                enableButtons();
+            else disableButtons();
+        }
+
+        private void ReadDataButton_Click(object sender, EventArgs e)
+        {
+            Util.readData(zipFilePath);
+            toCSV.Enabled = true;
+        }
+
+        private void enableButtons() 
+        {
+            ReadDataButton.Enabled = true;
+            updateFiles.Enabled = true;
+        }
+
+        private void disableButtons()
+        {
+            ReadDataButton.Enabled = false;
+            updateFiles.Enabled = false;
+        }
+
+        public static void updateProgressBar(int i) 
+        {
+            //progressBar1.Value = i;
+        }
+
+        private void toCSV_Click(object sender, EventArgs e)
+        {
+            string path = "C:\\";
+
+            SaveFileDialog CSVpathDialog = new SaveFileDialog();
+            var d = CSVpathDialog;
+            d.InitialDirectory = "C:\\";
+            d.FileName = "data.csv";
+            d.Filter = "CSV files (*.csv)|*.csv";
+            d.FilterIndex = 1;
+            d.RestoreDirectory = true;
+
+            if (d.ShowDialog() == DialogResult.OK)
+            {
+                path = d.FileName;
+                Util.printToFile(path);
+            }
         }
     }
 }
