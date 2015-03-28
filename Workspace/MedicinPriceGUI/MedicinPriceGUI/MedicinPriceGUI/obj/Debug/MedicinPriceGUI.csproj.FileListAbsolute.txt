@@ -1,0 +1,9 @@
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\bin\Debug\MedicinPriceGUI.exe.config
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\bin\Debug\MedicinPriceGUI.exe
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\bin\Debug\MedicinPriceGUI.pdb
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\obj\Debug\MedicinPriceGUI.csprojResolveAssemblyReference.cache
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\obj\Debug\MedicinPriceGUI.Form1.resources
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\obj\Debug\MedicinPriceGUI.Properties.Resources.resources
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\obj\Debug\MedicinPriceGUI.csproj.GenerateResource.Cache
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\obj\Debug\MedicinPriceGUI.exe
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\obj\Debug\MedicinPriceGUI.pdb

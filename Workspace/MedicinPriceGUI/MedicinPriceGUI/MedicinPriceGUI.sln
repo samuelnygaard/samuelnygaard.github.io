@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicinPriceGUI", "MedicinPriceGUI\MedicinPriceGUI.csproj", "{97E50CEA-8A13-4A20-B806-F0320A304ACE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97E50CEA-8A13-4A20-B806-F0320A304ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97E50CEA-8A13-4A20-B806-F0320A304ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97E50CEA-8A13-4A20-B806-F0320A304ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97E50CEA-8A13-4A20-B806-F0320A304ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
