@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 
@@ -33,8 +32,8 @@ namespace MedicinPriceGUI
 
         private void BrowseButton_Click(object sender, EventArgs e)
         {
-            OpenFileDialog newZipFileDialog = new OpenFileDialog();
-            var d = newZipFileDialog;
+            OpenFileDialog openZipFileDialog = new OpenFileDialog();
+            var d = openZipFileDialog;
             d.InitialDirectory = "C:\\";
             d.Filter = "ZIP files (*.zip)|*.zip|All files (*.*)|*.*";
             d.FilterIndex = 1;
@@ -44,7 +43,7 @@ namespace MedicinPriceGUI
             {
                 path = d.FileName.ToString();
                 textBox1.Text = path;
-                if (path.Contains("NYESTE\\lms.zip"))
+                if (path.ToLower().EndsWith("nyeste\\lms.zip"))
                     enableButtons();
                 else disableButtons();
             }
@@ -53,16 +52,24 @@ namespace MedicinPriceGUI
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             path = textBox1.Text;
-            if (path.ToLower().Contains("nyeste\\lms.zip"))
+            if (path.ToLower().EndsWith("nyeste\\lms.zip"))
+            {
                 enableButtons();
-            else disableButtons();
+                statusbarLabel.Text = "";
+            }
+            else
+            {
+                disableButtons();
+                statusbarLabel.Text = "Path dosent match.";
+            }
         }
 
         private void ReadDataButton_Click(object sender, EventArgs e)
         {
             statusbarLabel.Text = "Reading data ...";
-            Util.readData(path);
-            statusbarLabel.Text = "Finish reading data.";
+            Exception error = Util.readData(path);
+            if (error != null)
+                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             toCSV.Enabled = true;
         }
 
@@ -83,12 +90,17 @@ namespace MedicinPriceGUI
             //progressBar1.Value = i;
         }
 
+        public static void updateStatusBar(string s)
+        {
+            //statusbarLabel.Text = s;
+        }
+
         private void toCSV_Click(object sender, EventArgs e)
         {
-            string path = "C:\\";
+            string initialPath = "C:\\";
 
-            SaveFileDialog CSVpathDialog = new SaveFileDialog();
-            var d = CSVpathDialog;
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            var d = saveFileDialog;
             d.InitialDirectory = "C:\\";
             d.FileName = "data.csv";
             d.Filter = "CSV files (*.csv)|*.csv";
@@ -97,11 +109,11 @@ namespace MedicinPriceGUI
 
             if (d.ShowDialog() == DialogResult.OK)
             {
-                path = d.FileName;
-                statusbarLabel.Text = "Saving " + path + " ...";
-                Thread.Sleep(1000);
-                Util.printToFile(path);
-                statusbarLabel.Text = "CSV file saved.";
+                initialPath = d.FileName;
+                statusbarLabel.Text = "Saving " + initialPath + " ...";
+                Exception error = Util.printToFile(initialPath);
+                if (error != null)
+                    MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -113,7 +125,10 @@ namespace MedicinPriceGUI
 
         private void updateFiles_Click(object sender, EventArgs e)
         {
-            Util.updateFiles(path);
+            statusbarLabel.Text = "Testing internet connection ...";
+            Exception error = Util.updateFiles(path);
+            if (error != null)
+                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

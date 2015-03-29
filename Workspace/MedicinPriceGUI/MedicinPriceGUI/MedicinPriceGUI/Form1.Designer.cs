@@ -65,7 +65,7 @@
             this.ReadDataButton.Name = "ReadDataButton";
             this.ReadDataButton.Size = new System.Drawing.Size(125, 23);
             this.ReadDataButton.TabIndex = 3;
-            this.ReadDataButton.Text = "Read files";
+            this.ReadDataButton.Text = "Read data";
             this.ReadDataButton.UseVisualStyleBackColor = true;
             this.ReadDataButton.Click += new System.EventHandler(this.ReadDataButton_Click);
             // 
@@ -165,8 +165,8 @@
         private System.Windows.Forms.Button updateFiles;
         private System.Windows.Forms.Button toCSV;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel statusbarLabel;
         private System.Windows.Forms.Button dbSettingsButtom;
+        public System.Windows.Forms.ToolStripStatusLabel statusbarLabel;
         public System.Windows.Forms.ProgressBar progressBar1;
 
 
