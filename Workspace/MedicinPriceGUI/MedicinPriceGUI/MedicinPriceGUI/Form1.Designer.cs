@@ -31,12 +31,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ReadDataButton = new System.Windows.Forms.Button();
-            progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.BrowseButton = new System.Windows.Forms.Button();
             this.updateFiles = new System.Windows.Forms.Button();
             this.toCSV = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusbarLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dbSettingsButtom = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,10 +71,10 @@
             // 
             // progressBar1
             // 
-            progressBar1.Location = new System.Drawing.Point(13, 114);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new System.Drawing.Size(259, 23);
-            progressBar1.TabIndex = 4;
+            this.progressBar1.Location = new System.Drawing.Point(13, 114);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(259, 23);
+            this.progressBar1.TabIndex = 4;
             // 
             // BrowseButton
             // 
@@ -93,6 +94,7 @@
             this.updateFiles.TabIndex = 6;
             this.updateFiles.Text = "Update files";
             this.updateFiles.UseVisualStyleBackColor = true;
+            this.updateFiles.Click += new System.EventHandler(this.updateFiles_Click);
             // 
             // toCSV
             // 
@@ -120,16 +122,27 @@
             this.statusbarLabel.Size = new System.Drawing.Size(118, 17);
             this.statusbarLabel.Text = "toolStripStatusLabel1";
             // 
+            // dbSettingsButtom
+            // 
+            this.dbSettingsButtom.Location = new System.Drawing.Point(16, 174);
+            this.dbSettingsButtom.Name = "dbSettingsButtom";
+            this.dbSettingsButtom.Size = new System.Drawing.Size(75, 23);
+            this.dbSettingsButtom.TabIndex = 9;
+            this.dbSettingsButtom.Text = "DB settings";
+            this.dbSettingsButtom.UseVisualStyleBackColor = true;
+            this.dbSettingsButtom.Click += new System.EventHandler(this.dbSettingsButtom_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.dbSettingsButtom);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toCSV);
             this.Controls.Add(this.updateFiles);
             this.Controls.Add(this.BrowseButton);
-            this.Controls.Add(progressBar1);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.ReadDataButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -150,10 +163,11 @@
         private System.Windows.Forms.Button ReadDataButton;
         private System.Windows.Forms.Button BrowseButton;
         private System.Windows.Forms.Button updateFiles;
-        public static System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button toCSV;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statusbarLabel;
+        private System.Windows.Forms.Button dbSettingsButtom;
+        public System.Windows.Forms.ProgressBar progressBar1;
 
 
 

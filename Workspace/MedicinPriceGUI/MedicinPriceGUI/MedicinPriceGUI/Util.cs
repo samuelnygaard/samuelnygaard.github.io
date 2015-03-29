@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.IO.Compression;
+using System.Net;
 
 namespace MedicinPriceGUI
 {
@@ -24,9 +25,100 @@ namespace MedicinPriceGUI
         // Lægemiddelform
         static Dictionary<string, string> forms = new Dictionary<string, string>();
 
-        public static void readData(string zipFilePath)
+        public static void updateFiles(string path)
         {
-            using (ZipArchive archive = System.IO.Compression.ZipFile.OpenRead(zipFilePath))
+            string newPath = path.Remove(path.Length - 15);
+            string[] folders = Directory.GetDirectories(newPath);
+            int max = 0;
+            foreach (string folder in folders)
+            {
+                string s = folder.Remove(0, (newPath.Length + 1));
+                try
+                {
+                    int i = int.Parse(s);
+                    if (i > max)
+                        max = i;
+                }
+                catch { }
+            }
+
+            FtpWebRequest ftpRequest = (FtpWebRequest)WebRequest.Create("ftp://ftp.medicinpriser.dk/LMS/");
+            ftpRequest.Credentials = new NetworkCredential("mpe00599", "Mayday100");
+            ftpRequest.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
+            FtpWebResponse response = (FtpWebResponse)ftpRequest.GetResponse();
+            StreamReader streamReader = new StreamReader(response.GetResponseStream());
+
+            List<string> ftpFolders = new List<string>();
+
+            while (!streamReader.EndOfStream)
+            {
+                ftpFolders.Add(streamReader.ReadLine());
+            }
+
+            streamReader.Close();
+            int ftpMax = 0;
+
+            foreach (string fullFolder in ftpFolders)
+            {
+                string folder = fullFolder.Remove(0, 51);
+                try
+                {
+                    int i = int.Parse(folder);
+                    if (i > ftpMax)
+                        ftpMax = i;
+                }
+                catch { }
+            }
+            Console.WriteLine((ftpMax - max).ToString());
+            if (ftpMax > max)
+            {
+                FtpWebRequest reqFTP;
+                for (int i = max + 1; i <= ftpMax; i++)
+                {
+                    if (int.Parse(i.ToString().Remove(0, i.ToString().Length - 2)) > 31)
+                    {
+                        i += 69;
+                    }
+
+                    try
+                    {
+                        reqFTP = (FtpWebRequest)FtpWebRequest.Create(new Uri("ftp://ftp.medicinpriser.dk/LMS/" + i.ToString() + "/lms.zip"));
+                        reqFTP.Method = WebRequestMethods.Ftp.DownloadFile;
+                        reqFTP.UseBinary = true;
+                        reqFTP.Credentials = new NetworkCredential("mpe00599", "Mayday100");
+                        FtpWebResponse response1 = (FtpWebResponse)reqFTP.GetResponse();
+                        Stream responseStream = response1.GetResponseStream();
+
+                        string downloadPath = newPath + "\\" + i.ToString();
+                        Directory.CreateDirectory(downloadPath);
+                        string downloadFilePath = downloadPath + "\\lms.zip";
+                        //FileStream fs = File.Create(downloadFilePath);
+                        FileStream outputStream = new FileStream(downloadFilePath, FileMode.Create);
+
+                        //long cl = response1.ContentLength;
+                        int bufferSize = 2048;
+                        int readCount;
+                        byte[] buffer = new byte[bufferSize];
+
+                        readCount = responseStream.Read(buffer, 0, bufferSize);
+                        while (readCount > 0)
+                        {
+                            outputStream.Write(buffer, 0, readCount);
+                            readCount = responseStream.Read(buffer, 0, bufferSize);
+                        }
+
+                        responseStream.Close();
+                        outputStream.Close();
+                        response.Close();
+                    }
+                    catch { }
+                }
+            }
+        }
+
+        public static void readData(string path)
+        {
+            using (ZipArchive archive = System.IO.Compression.ZipFile.OpenRead(path))
             {
                 using (StreamReader sr = new StreamReader(archive.GetEntry("lms22.txt").Open(), Encoding.GetEncoding(850)))
                 {
@@ -38,7 +130,7 @@ namespace MedicinPriceGUI
 
             // Datafiles (all zip files)
             int i = 0;
-            string[] files = Directory.GetFiles(zipFilePath.Remove(zipFilePath.Length - 15), "lms.zip", SearchOption.AllDirectories);
+            string[] files = Directory.GetFiles(path.Remove(path.Length - 15), "lms.zip", SearchOption.AllDirectories);
             int t = files.Length;
 
             Console.Write("Processing files: 0 %");

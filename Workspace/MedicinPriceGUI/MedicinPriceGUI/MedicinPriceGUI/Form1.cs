@@ -13,15 +13,16 @@ namespace MedicinPriceGUI
 {
     public partial class Form1 : Form
     {
-        static string zipFilePath = "C:\\";
+        static string path = "C:\\";
+        public static string host, port, username, password, database;
 
         public Form1()
         {
             InitializeComponent();
-            textBox1.Text = zipFilePath;
+            textBox1.Text = path;
             ReadDataButton.Enabled = false;
             updateFiles.Enabled = false;
-            //toCSV.Enabled = false;
+            toCSV.Enabled = false;
             statusbarLabel.Text = "";
         }
 
@@ -41,9 +42,9 @@ namespace MedicinPriceGUI
 
             if (d.ShowDialog() == DialogResult.OK)
             {
-                zipFilePath = d.FileName.ToString();
-                textBox1.Text = zipFilePath;
-                if (zipFilePath.Contains("NYESTE\\lms.zip"))
+                path = d.FileName.ToString();
+                textBox1.Text = path;
+                if (path.Contains("NYESTE\\lms.zip"))
                     enableButtons();
                 else disableButtons();
             }
@@ -51,8 +52,8 @@ namespace MedicinPriceGUI
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            zipFilePath = textBox1.Text;
-            if (zipFilePath.Contains("NYESTE\\lms.zip"))
+            path = textBox1.Text;
+            if (path.ToLower().Contains("nyeste\\lms.zip"))
                 enableButtons();
             else disableButtons();
         }
@@ -60,7 +61,7 @@ namespace MedicinPriceGUI
         private void ReadDataButton_Click(object sender, EventArgs e)
         {
             statusbarLabel.Text = "Reading data ...";
-            Util.readData(zipFilePath);
+            Util.readData(path);
             statusbarLabel.Text = "Finish reading data.";
             toCSV.Enabled = true;
         }
@@ -79,7 +80,7 @@ namespace MedicinPriceGUI
 
         public static void updateProgressBar(int i)
         {
-            progressBar1.Value = i;
+            //progressBar1.Value = i;
         }
 
         private void toCSV_Click(object sender, EventArgs e)
@@ -102,6 +103,17 @@ namespace MedicinPriceGUI
                 Util.printToFile(path);
                 statusbarLabel.Text = "CSV file saved.";
             }
+        }
+
+        private void dbSettingsButtom_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+        }
+
+        private void updateFiles_Click(object sender, EventArgs e)
+        {
+            Util.updateFiles(path);
         }
     }
 }
