@@ -26,10 +26,8 @@ namespace MedicinPriceGUI
         // Lægemiddelform
         static Dictionary<string, string> forms = new Dictionary<string, string>();
 
-        public static Exception updateFiles(string path)
+        public static void updateFiles(string path, string username, string password)
         {
-            try
-            {
                 string newPath = path.Remove(path.Length - 15);
                 string[] folders = Directory.GetDirectories(newPath);
                 int max = 0;
@@ -46,7 +44,7 @@ namespace MedicinPriceGUI
                 }
 
                 FtpWebRequest ftpRequest = (FtpWebRequest)WebRequest.Create("ftp://ftp.medicinpriser.dk/LMS/");
-                ftpRequest.Credentials = new NetworkCredential("mpe00599", "Mayday100");
+                ftpRequest.Credentials = new NetworkCredential(username, password);
                 ftpRequest.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
                 FtpWebResponse response = (FtpWebResponse)ftpRequest.GetResponse();
                 StreamReader streamReader = new StreamReader(response.GetResponseStream());
@@ -81,7 +79,7 @@ namespace MedicinPriceGUI
                         FtpWebRequest req = (FtpWebRequest)FtpWebRequest.Create(new Uri("ftp://ftp.medicinpriser.dk/LMS/NYESTE/lms.zip"));
                         req.Method = WebRequestMethods.Ftp.DownloadFile;
                         req.UseBinary = true;
-                        req.Credentials = new NetworkCredential("mpe00599", "Mayday100");
+                        req.Credentials = new NetworkCredential(username, password);
                         FtpWebResponse response1 = (FtpWebResponse)req.GetResponse();
                         Stream responseStream = response1.GetResponseStream();
                         FileStream outputStream = new FileStream(path, FileMode.Create);
@@ -103,7 +101,7 @@ namespace MedicinPriceGUI
                     }
                     catch (Exception e)
                     {
-                        return e;
+                        Form1.errorHandler(e);
                     }
 
                     // Downloads the missing zip files
@@ -122,7 +120,7 @@ namespace MedicinPriceGUI
                                 reqFTP = (FtpWebRequest)FtpWebRequest.Create(new Uri("ftp://ftp.medicinpriser.dk/LMS/" + day.ToString("yyyyMMdd") + "/lms.zip"));
                                 reqFTP.Method = WebRequestMethods.Ftp.DownloadFile;
                                 reqFTP.UseBinary = true;
-                                reqFTP.Credentials = new NetworkCredential("mpe00599", "Mayday100");
+                                reqFTP.Credentials = new NetworkCredential(username, password);
                                 FtpWebResponse response1 = (FtpWebResponse)reqFTP.GetResponse();
                                 Stream responseStream = response1.GetResponseStream();
 
@@ -156,16 +154,11 @@ namespace MedicinPriceGUI
                 }
                 else
                     Form1.updateStatusBar("Files already up to date");
-                return null;
-            }
-            catch (Exception e)
-            {
-                return e;
-            }
         }
 
-        public static Exception readData(string path)
+        public static void readData(string path)
         {
+            Form1.updateStatusBar("Reading data ...");
             try
             {
                 using (ZipArchive archive = System.IO.Compression.ZipFile.OpenRead(path))
@@ -302,11 +295,10 @@ namespace MedicinPriceGUI
                     }
                 }
                 Form1.updateStatusBar("Finish reading data.");
-                return null;
             }
             catch (Exception e)
             {
-                return e;
+                Form1.errorHandler(e);
             }
         }
 

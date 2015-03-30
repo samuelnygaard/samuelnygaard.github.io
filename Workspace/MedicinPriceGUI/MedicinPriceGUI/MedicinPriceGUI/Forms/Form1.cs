@@ -27,7 +27,12 @@ namespace MedicinPriceGUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        public static void errorHandler(Exception e)
+        {
+            MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void BrowseButton_Click(object sender, EventArgs e)
@@ -66,10 +71,7 @@ namespace MedicinPriceGUI
 
         private void ReadDataButton_Click(object sender, EventArgs e)
         {
-            statusbarLabel.Text = "Reading data ...";
-            Exception error = Util.readData(path);
-            if (error != null)
-                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Util.readData(path);                
             toCSV.Enabled = true;
         }
 
@@ -87,12 +89,12 @@ namespace MedicinPriceGUI
 
         public static void updateProgressBar(int i)
         {
-            //progressBar1.Value = i;
+            progressBar1.Value = i;
         }
 
         public static void updateStatusBar(string s)
         {
-            //statusbarLabel.Text = s;
+            statusbarLabel.Text = s;
         }
 
         private void toCSV_Click(object sender, EventArgs e)
@@ -111,9 +113,7 @@ namespace MedicinPriceGUI
             {
                 initialPath = d.FileName;
                 statusbarLabel.Text = "Saving " + initialPath + " ...";
-                Exception error = Util.printToFile(initialPath);
-                if (error != null)
-                    MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Util.printToFile(initialPath);
             }
         }
 
@@ -126,9 +126,7 @@ namespace MedicinPriceGUI
         private void updateFiles_Click(object sender, EventArgs e)
         {
             statusbarLabel.Text = "Testing internet connection ...";
-            Exception error = Util.updateFiles(path);
-            if (error != null)
-                MessageBox.Show(error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Util.updateFiles(path, "mpe00599", "Mayday100");
         }
     }
 }
