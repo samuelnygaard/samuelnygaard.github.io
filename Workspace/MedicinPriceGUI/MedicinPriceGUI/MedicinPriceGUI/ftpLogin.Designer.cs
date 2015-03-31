@@ -34,12 +34,14 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(10, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 0;
@@ -47,7 +49,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 30);
+            this.textBox1.Location = new System.Drawing.Point(13, 70);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(344, 20);
             this.textBox1.TabIndex = 1;
@@ -55,7 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 57);
+            this.label2.Location = new System.Drawing.Point(13, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 2;
@@ -63,14 +65,14 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 73);
+            this.textBox2.Location = new System.Drawing.Point(13, 113);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(344, 20);
             this.textBox2.TabIndex = 3;
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(284, 112);
+            this.loginButton.Location = new System.Drawing.Point(281, 152);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(75, 23);
             this.loginButton.TabIndex = 4;
@@ -79,18 +81,37 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(16, 111);
+            this.cancelButton.Location = new System.Drawing.Point(13, 151);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 5;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "FTP Server";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(13, 30);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(343, 20);
+            this.textBox3.TabIndex = 7;
+            this.textBox3.Text = "ftp://ftp.medicinpriser.dk/LMS/";
+            // 
             // ftpLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 147);
+            this.ClientSize = new System.Drawing.Size(372, 206);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.textBox2);
@@ -112,5 +133,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

@@ -9,3 +9,4 @@ C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPric
 C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\obj\Debug\MedicinPriceGUI.pdb
 C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\obj\Debug\MedicinPriceGUI.Form2.resources
 C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\obj\Debug\MedicinPriceGUI.Forms.ftpLogin.resources
+C:\Users\Samuel\Desktop\theodor4.github.io\Workspace\MedicinPriceGUI\MedicinPriceGUI\MedicinPriceGUI\obj\Debug\MedicinPriceGUI.Form3.resources

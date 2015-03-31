@@ -29,7 +29,6 @@ namespace MedicinPriceGUI
 
         public static void updateFiles(Form1 form, string path, string ftpServer, string username, string password)
         {
-            form.updateStatusBar("Testing internet connection ...");
             // Finds the folder with the biggest "number" (latest date) in the path
             string newPath = path.Remove(path.Length - 15);
             string[] folders = Directory.GetDirectories(newPath);
@@ -46,21 +45,14 @@ namespace MedicinPriceGUI
                 catch { }
             }
 
-            StreamReader streamReader = null;
+
             // Gets the Directory details from ftp server
-            try
-            {
-                FtpWebRequest ftpRequest = (FtpWebRequest)WebRequest.Create(ftpServer);
-                ftpRequest.Credentials = new NetworkCredential(username, password);
-                ftpRequest.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
-                FtpWebResponse response = (FtpWebResponse)ftpRequest.GetResponse();
-                streamReader = new StreamReader(response.GetResponseStream());
-            }
-            catch (Exception e)
-            {
-                form.errorHandler(e.Message);
-                return;
-            }
+            FtpWebRequest ftpRequest = (FtpWebRequest)WebRequest.Create(ftpServer);
+            ftpRequest.Credentials = new NetworkCredential(username, password);
+            ftpRequest.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
+            FtpWebResponse response = (FtpWebResponse)ftpRequest.GetResponse();
+            StreamReader streamReader = new StreamReader(response.GetResponseStream());
+
             List<string> ftpFolders = new List<string>();
 
             while (!streamReader.EndOfStream)
@@ -87,38 +79,12 @@ namespace MedicinPriceGUI
 
             if (ftpMax > max)
             {
-                form.updateStatusBar("Start updating files ...");
-                try
-                {
-                    // Downloads the newest ZIP settings-file "/LMS/NYESTE/lms.zip"
-                    FtpWebRequest req = (FtpWebRequest)FtpWebRequest.Create(new Uri(ftpServer + "NYESTE/lms.zip"));
-                    req.Method = WebRequestMethods.Ftp.DownloadFile;
-                    req.UseBinary = true;
-                    req.Credentials = new NetworkCredential(username, password);
-                    FtpWebResponse response1 = (FtpWebResponse)req.GetResponse();
-                    Stream responseStream = response1.GetResponseStream();
-                    FileStream outputStream = new FileStream(path, FileMode.Create);
+                string file = "lms.zip";
+                string ftpNEWlocation = ftpServer + "NYESTE";
+                string downloadNEWlocation = newPath + "\\NYESTE";
 
-                    int bufferSize = 2048;
-                    int readCount;
-                    byte[] buffer = new byte[bufferSize];
+                downloadFTPfile(ftpNEWlocation, downloadNEWlocation, file, username, password);
 
-                    readCount = responseStream.Read(buffer, 0, bufferSize);
-                    while (readCount > 0)
-                    {
-                        outputStream.Write(buffer, 0, readCount);
-                        readCount = responseStream.Read(buffer, 0, bufferSize);
-                    }
-                    responseStream.Close();
-                    outputStream.Close();
-                    response1.Close();
-                }
-                catch (Exception e)
-                {
-                    form.errorHandler(e.Message);
-                }
-
-                form.updateStatusBar("Start updating files ...");
                 // Downloads the missing zip files
                 DateTime startDate, endDate;
                 if ((DateTime.TryParseExact(max.ToString(), "yyyyMMdd", CultureInfo.InvariantCulture, DateTimeStyles.None, out startDate)) && (DateTime.TryParseExact(ftpMax.ToString(), "yyyyMMdd", CultureInfo.InvariantCulture, DateTimeStyles.None, out endDate)))
@@ -126,47 +92,13 @@ namespace MedicinPriceGUI
                     int i = 0;
                     int j = (endDate - startDate).Days;
 
-                    FtpWebRequest reqFTP = null;
-                    FtpWebResponse response2 = null;
-                    Stream responseStream = null;
-                    FileStream outputStream = null;
-
                     for (var day = startDate.Date.AddDays(1); day.Date <= endDate.Date; day = day.AddDays(1))
                     {
+                        string ftpLocation = ftpServer + day.ToString("yyyyMMdd");
+                        string downloadLocation = newPath + "\\" + day.ToString("yyyyMMdd");
 
-                        try
-                        {
-                            reqFTP = (FtpWebRequest)FtpWebRequest.Create(new Uri(ftpServer + day.ToString("yyyyMMdd") + "/lms.zip"));
-                            reqFTP.Method = WebRequestMethods.Ftp.DownloadFile;
-                            reqFTP.UseBinary = true;
-                            reqFTP.Credentials = new NetworkCredential(username, password);
-                            response2 = (FtpWebResponse)reqFTP.GetResponse();
-                            responseStream = response2.GetResponseStream();
-
-                            string downloadPath = newPath + "\\" + day.ToString("yyyyMMdd");
-                            Directory.CreateDirectory(downloadPath);
-                            string downloadFilePath = downloadPath + "\\lms.zip";
-                            outputStream = new FileStream(downloadFilePath, FileMode.Create);
-
-                            int bufferSize = 2048;
-                            int readCount;
-                            byte[] buffer = new byte[bufferSize];
-
-                            readCount = responseStream.Read(buffer, 0, bufferSize);
-                            while (readCount > 0)
-                            {
-                                outputStream.Write(buffer, 0, readCount);
-                                readCount = responseStream.Read(buffer, 0, bufferSize);
-                            }
-                        }
-                        catch { }
-                        try
-                        {
-                            responseStream.Close();
-                            outputStream.Close();
-                            response2.Close();
-                        }
-                        catch { }
+                        //Download file from ftp server
+                        downloadFTPfile(ftpLocation, downloadLocation, file, username, password);
 
                         i++;
                         form.updateProgressBar(((i * 100) / j));
@@ -321,30 +253,13 @@ namespace MedicinPriceGUI
             }
             catch (Exception e)
             {
-                form.errorHandler(e.Message);
+                form.errorHandler(e);
             }
-        }
-
-        public static string removeWhitespace(string s)
-        {
-            string result = string.Empty;
-
-            foreach (char c in s)
-                if (!Char.IsWhiteSpace(c))
-                    result += c;
-
-            return result;
         }
 
         // Directories to CSV file
         public static void printToFile(Form1 form, string outputPath)
         {
-            if (drugs.Count == 0)
-            {
-                form.errorHandler("No files to process\nRead data first");
-                return;
-            }
-            
             try
             {
                 StringBuilder priceHeader = new StringBuilder();
@@ -412,8 +327,55 @@ namespace MedicinPriceGUI
             }
             catch (Exception e)
             {
-                form.errorHandler(e.Message);
+                form.errorHandler(e);
             }
+        }
+
+        private static void downloadFTPfile(string fptLocation, string downloadLocation, string file, string username, string password)
+        {
+            try
+            {
+                FtpWebRequest reqFTP;
+
+                reqFTP = (FtpWebRequest)FtpWebRequest.Create(new Uri(fptLocation + file));
+                reqFTP.Method = WebRequestMethods.Ftp.DownloadFile;
+                reqFTP.UseBinary = true;
+                reqFTP.Credentials = new NetworkCredential(username, password);
+                FtpWebResponse response = (FtpWebResponse)reqFTP.GetResponse();
+                Stream responseStream = response.GetResponseStream();
+
+                if (!Directory.Exists(downloadLocation))
+                    Directory.CreateDirectory(downloadLocation);
+                string downloadFilePath = downloadLocation + "\\" + file;
+                FileStream outputStream = new FileStream(downloadFilePath, FileMode.Create);
+
+                int bufferSize = 2048;
+                int readCount;
+                byte[] buffer = new byte[bufferSize];
+
+                readCount = responseStream.Read(buffer, 0, bufferSize);
+                while (readCount > 0)
+                {
+                    outputStream.Write(buffer, 0, readCount);
+                    readCount = responseStream.Read(buffer, 0, bufferSize);
+                }
+
+                responseStream.Close();
+                outputStream.Close();
+                response.Close();
+            }
+            catch { }
+        }
+
+        private static string removeWhitespace(string s)
+        {
+            string result = string.Empty;
+
+            foreach (char c in s)
+                if (!Char.IsWhiteSpace(c))
+                    result += c;
+
+            return result;
         }
     }
 }

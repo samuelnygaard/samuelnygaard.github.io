@@ -12,8 +12,9 @@ namespace MedicinPriceGUI
 {
     public partial class Form1 : Form
     {
-        static string path = "C:\\";
-        public static string host, port, username, password, database;
+        private string path = "C:\\";
+        public static string host, port, username, password, database, ftpServer, ftpUsername, ftpPassword;
+        public static bool goON = false;
 
         public Form1()
         {
@@ -30,9 +31,9 @@ namespace MedicinPriceGUI
             
         }
 
-        public void errorHandler(Exception e)
+        public void errorHandler(string message)
         {
-            MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void BrowseButton_Click(object sender, EventArgs e)
@@ -120,13 +121,16 @@ namespace MedicinPriceGUI
         private void dbSettingsButtom_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
-            f2.Show();
+            f2.ShowDialog();
         }
 
         private void updateFiles_Click(object sender, EventArgs e)
         {
-            statusbarLabel.Text = "Testing internet connection ...";
-            Util.updateFiles(this, path, "mpe00599", "Mayday100");
+            Form3 login = new Form3();
+            login.ShowDialog();
+            if (goON)
+                Util.updateFiles(this, path, ftpServer, ftpUsername, ftpPassword); // TODO: Make login form
+            goON = false;
         }
     }
 }
