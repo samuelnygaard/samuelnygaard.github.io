@@ -7,7 +7,6 @@ using System.Collections;
 using System.Text;
 using System.IO.Compression;
 using System.IO;
-using Npgsql;
 
 namespace MedicinPriceGUI
 {

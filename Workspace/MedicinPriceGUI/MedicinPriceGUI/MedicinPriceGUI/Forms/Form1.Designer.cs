@@ -31,12 +31,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ReadDataButton = new System.Windows.Forms.Button();
-            progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.BrowseButton = new System.Windows.Forms.Button();
             this.updateFiles = new System.Windows.Forms.Button();
             this.toCSV = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            statusbarLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusbarLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.dbSettingsButtom = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -71,10 +71,10 @@
             // 
             // progressBar1
             // 
-            progressBar1.Location = new System.Drawing.Point(13, 114);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new System.Drawing.Size(259, 23);
-            progressBar1.TabIndex = 4;
+            this.progressBar1.Location = new System.Drawing.Point(13, 114);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(259, 23);
+            this.progressBar1.TabIndex = 4;
             // 
             // BrowseButton
             // 
@@ -109,7 +109,7 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            statusbarLabel});
+            this.statusbarLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 239);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(284, 22);
@@ -118,9 +118,9 @@
             // 
             // statusbarLabel
             // 
-            statusbarLabel.Name = "statusbarLabel";
-            statusbarLabel.Size = new System.Drawing.Size(118, 17);
-            statusbarLabel.Text = "toolStripStatusLabel1";
+            this.statusbarLabel.Name = "statusbarLabel";
+            this.statusbarLabel.Size = new System.Drawing.Size(118, 17);
+            this.statusbarLabel.Text = "toolStripStatusLabel1";
             // 
             // dbSettingsButtom
             // 
@@ -142,7 +142,7 @@
             this.Controls.Add(this.toCSV);
             this.Controls.Add(this.updateFiles);
             this.Controls.Add(this.BrowseButton);
-            this.Controls.Add(progressBar1);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.ReadDataButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -166,8 +166,8 @@
         private System.Windows.Forms.Button toCSV;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Button dbSettingsButtom;
-        public static System.Windows.Forms.ToolStripStatusLabel statusbarLabel;
-        public static System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ToolStripStatusLabel statusbarLabel;
+        private System.Windows.Forms.ProgressBar progressBar1;
 
 
 

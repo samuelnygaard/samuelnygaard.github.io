@@ -30,7 +30,7 @@ namespace MedicinPriceGUI
             
         }
 
-        public static void errorHandler(Exception e)
+        public void errorHandler(Exception e)
         {
             MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -39,7 +39,7 @@ namespace MedicinPriceGUI
         {
             OpenFileDialog openZipFileDialog = new OpenFileDialog();
             var d = openZipFileDialog;
-            d.InitialDirectory = "C:\\";
+            d.InitialDirectory = path;
             d.Filter = "ZIP files (*.zip)|*.zip|All files (*.*)|*.*";
             d.FilterIndex = 1;
             d.RestoreDirectory = true;
@@ -71,7 +71,7 @@ namespace MedicinPriceGUI
 
         private void ReadDataButton_Click(object sender, EventArgs e)
         {
-            Util.readData(path);                
+            Util.readData(this, path);                
             toCSV.Enabled = true;
         }
 
@@ -87,12 +87,12 @@ namespace MedicinPriceGUI
             updateFiles.Enabled = false;
         }
 
-        public static void updateProgressBar(int i)
+        public void updateProgressBar(int i)
         {
             progressBar1.Value = i;
         }
 
-        public static void updateStatusBar(string s)
+        public void updateStatusBar(string s)
         {
             statusbarLabel.Text = s;
         }
@@ -113,7 +113,7 @@ namespace MedicinPriceGUI
             {
                 initialPath = d.FileName;
                 statusbarLabel.Text = "Saving " + initialPath + " ...";
-                Util.printToFile(initialPath);
+                Util.printToFile(this, initialPath);
             }
         }
 
@@ -126,7 +126,7 @@ namespace MedicinPriceGUI
         private void updateFiles_Click(object sender, EventArgs e)
         {
             statusbarLabel.Text = "Testing internet connection ...";
-            Util.updateFiles(path, "mpe00599", "Mayday100");
+            Util.updateFiles(this, path, "mpe00599", "Mayday100");
         }
     }
 }
