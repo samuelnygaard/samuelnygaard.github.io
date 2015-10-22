@@ -1,28 +1,29 @@
 (function($) {
 	
 	$("#contact_form").submit(function() {
+		var myEmail = "teamnygaard@gmail.com";
         var email = $("#email").val(); // get email field value
-		//TODO: Check if mail is on mail form
         var name = $("#name").val(); // get name field value
         var subject = $("#subject").val(); // get subject field value
 		var msg = $("#msg").val(); // get message field value
+		
         $.ajax(
         {
             type: "POST",
             url: "https://mandrillapp.com/api/1.0/messages/send.json",
             data: {
-                'key': 'TXiLI5xchGNql5q0HsM7MQ',
+                'key': 'TXiLI5xcahGNql5q0HsM7MQ',
                 'message': {
                     'from_email': email,
                     'from_name': name,
                     'headers': {
                         'Reply-To': email
                     },
-                    'subject': subject,
+                    'subject': ('[WEBSITE]: ' + subject),
                     'text': msg,
                     'to': [
                     {
-                        'email': 'teamnygaard@gmail.com',
+                        'email': myEmail,
                         'name': 'Samuel Nygaard',
                         'type': 'to'
                     }]
@@ -30,17 +31,18 @@
             }
         })
         .done(function(response) {
-            alert('Your message has been sent. Thank you!'); // show success message
+            $(".feedback-msg").html("<span style=\"color:green;\"> <span style=\"font-weight: bold;\"> Success:</span> Message sent");
             $("#name").val(''); // reset field after successful submission
             $("#email").val(''); // reset field after successful submission
+			$("#subject").val('');  // reset field after successful submission
             $("#msg").val(''); // reset field after successful submission
         })
         .fail(function(response) {
-            alert('Error sending message.');
+			$(".feedback-msg").html("<span style=\"color:red;\"> <span style=\"font-weight: bold;\"> Error:</span> Try again or email me at </span><a href=" + myEmail + "> " + myEmail + "</>");
         });
         return false; // prevent page refresh
     });
-
+	
 	/**
 	 * Generate an indented list of links from a nav. Meant for use with panel().
 	 * @return {jQuery} jQuery object.
