@@ -1,4 +1,14 @@
 (function($) {
+
+	if (!isIE())
+		$("#email").attr('oninvalid', "setCustomValidity('Incorrect email address')");
+
+	function isIE() {
+		if (window.navigator.userAgent.indexOf("MSIE ") > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))
+			return true;
+		else
+			return false;
+	}
 	
 	$("#contact_form").submit(function() {
 		var myEmail = "teamnygaard@gmail.com";
@@ -7,12 +17,13 @@
         var subject = $("#subject").val(); // get subject field value
 		var msg = $("#msg").val(); // get message field value
 		
+		//var api = readAPI('./assets/js/text.txt');
         $.ajax(
         {
             type: "POST",
             url: "https://mandrillapp.com/api/1.0/messages/send.json",
             data: {
-                'key': 'TXiLI5xcahGNql5q0HsM7MQ',
+                'key': 'TXiLI5xchGNql5q0HsM7MQ',
                 'message': {
                     'from_email': email,
                     'from_name': name,
@@ -42,6 +53,20 @@
         });
         return false; // prevent page refresh
     });
+	
+	function readAPI(file) {
+		var api = '';
+		$.ajax({
+			type: "GET",
+			url: file,
+			dataType: "text",
+			success: function readData(data){
+				api += data.text();
+			}
+		})
+		return api;
+	}
+	
 	
 	/**
 	 * Generate an indented list of links from a nav. Meant for use with panel().
