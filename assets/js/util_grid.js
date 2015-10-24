@@ -13,11 +13,11 @@
                     'title'         : 'Lorem ipsum',
                     'description'   : 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ',
                     'thumbnail'     : ['images/1.png', 'images/2.png', 'images/3.png', 'images/1.png', 'images/1.png'],
-                    'large'         : ['images/1.png', 'images/2.png', 'images/3.png', 'images/10.png', 'images/1.png'],
+                    'large'         : ['images/1.png', 'images/2.png', 'images/3.png', 'images/1.png', 'images/1.png'],
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'DownloadPDF', 'url':'http://www.jqueryscript.net'}
                     ],
                     'tags'          : ['University Projects']
                 },
@@ -37,7 +37,7 @@
                     'title'         : 'Lorem ipsum ',
                     'description'   : 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ',
                     'thumbnail'     : ['images/3.png','images/5.png', 'images/4.png', 'images/1.png'],
-                    'large'         : ['images/5.png','images/5.png', 'images/4.png', 'images/10.png'],
+                    'large'         : ['images/5.png','images/5.png', 'images/4.png', 'images/1.png'],
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
@@ -73,7 +73,7 @@
                     'title'         : 'Lorem ipsum ',
                     'description'   : 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ',
                     'thumbnail'     : ['images/2.png','images/3.png', 'images/1.png', 'images/1.png'],
-                    'large'         : ['images/3.png','images/5.png', 'images/1.png', 'images/10.png'],
+                    'large'         : ['images/3.png','images/5.png', 'images/1.png', 'images/1.png'],
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
@@ -85,7 +85,7 @@
                     'title'         : 'Lorem ipsum ',
                     'description'   : 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ',
                     'thumbnail'     : ['images/6.png','images/5.png', 'images/4.png', 'images/1.png'],
-                    'large'         : ['images/6.png','images/5.png', 'images/4.png', 'images/10.png'],
+                    'large'         : ['images/6.png','images/5.png', 'images/4.png', 'images/1.png'],
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
@@ -121,7 +121,7 @@
                     'title'         : 'Lorem ipsum ',
                     'description'   : 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ',
                     'thumbnail'     : ['images/1.png','images/3.png', 'images/1.png', 'images/1.png'],
-                    'large'         : ['images/1.png','images/5.png', 'images/1.png', 'images/10.png'],
+                    'large'         : ['images/1.png','images/5.png', 'images/1.png', 'images/1.png'],
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
@@ -133,7 +133,7 @@
                     'title'         : 'Lorem ipsum ',
                     'description'   : 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ',
                     'thumbnail'     : ['images/3.png','images/3.png', 'images/1.png', 'images/1.png'],
-                    'large'         : ['images/3.png','images/5.png', 'images/1.png', 'images/10.png'],
+                    'large'         : ['images/3.png','images/5.png', 'images/1.png', 'images/1.png'],
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
@@ -145,7 +145,7 @@
                     'title'         : 'Lorem ipsum ',
                     'description'   : 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ',
                     'thumbnail'     : ['images/5.png','images/5.png', 'images/4.png', 'images/1.png'],
-                    'large'         : ['images/5.png','images/5.png', 'images/4.png', 'images/10.png'],
+                    'large'         : ['images/5.png','images/5.png', 'images/4.png', 'images/1.png'],
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
@@ -181,7 +181,7 @@
                     'title'         : 'Lorem ipsum ',
                     'description'   : 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ',
                     'thumbnail'     : ['images/4.png','images/3.png', 'images/1.png', 'images/1.png'],
-                    'large'         : ['images/4.png','images/5.png', 'images/1.png', 'images/10.png'],
+                    'large'         : ['images/4.png','images/5.png', 'images/1.png', 'images/1.png'],
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },

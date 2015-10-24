@@ -86,13 +86,14 @@
         var name = $("#name").val(); // get name field value
         var subject = $("#subject").val(); // get subject field value
         var msg = $("#msg").val(); // get message field value
-
-        //var api = readAPI('./assets/js/text.txt');
+debugger;
+        var api = readAPI('./assets/js/text.json');
+		console.log(api);
         $.ajax({
                 type: "POST",
                 url: "https://mandrillapp.com/api/1.0/messages/send.json",
                 data: {
-                    'key': 'TXiLI5xchGNql5q0HsM7MQ',
+                    'key': api,
                     'message': {
                         'from_email': email,
                         'from_name': name,
@@ -123,16 +124,13 @@
     });
 
     function readAPI(file) {
-        var api = '';
-        $.ajax({
-            type: "GET",
-            url: file,
-            dataType: "text",
-            success: function readData(data) {
-                api += data.text();
-            }
-        })
-        return api;
+		$.getJSON( file, function( data ) {
+		  var api = '';
+		  $.each( data, function( key, val ) {
+			api += val;
+		  });
+		  return api;
+		});
     }
 
 
@@ -259,7 +257,7 @@
 
                 // Reset scroll position.
                 if (config.resetScroll)
-                    $this.scrollTop(0);
+                    //$this.scrollTop(0);
 
                 // Reset forms.
                 if (config.resetForms)
