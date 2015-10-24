@@ -86,14 +86,14 @@
         var name = $("#name").val(); // get name field value
         var subject = $("#subject").val(); // get subject field value
         var msg = $("#msg").val(); // get message field value
-debugger;
+		debugger;
         var api = readAPI('./assets/js/text.json');
 		console.log(api);
         $.ajax({
                 type: "POST",
                 url: "https://mandrillapp.com/api/1.0/messages/send.json",
                 data: {
-                    'key': api,
+                    'key': 'TXiLI5xchGNql5q0HsM7MQ',
                     'message': {
                         'from_email': email,
                         'from_name': name,

@@ -1968,6 +1968,10 @@ cd-bounce-2-inverse {  0% {
 				font-size: 1.25em;
 				letter-spacing: -0.025em;
 			}
+			
+			img {
+				max-width: 300px;
+			}
 
 		/* Section/Article */
 

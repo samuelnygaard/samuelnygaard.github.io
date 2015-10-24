@@ -12,12 +12,12 @@
                 {
                     'title'         : 'Lorem ipsum',
                     'description'   : 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ',
-                    'thumbnail'     : ['images/1.png', 'images/2.png', 'images/3.png', 'images/1.png', 'images/1.png'],
-                    'large'         : ['images/1.png', 'images/2.png', 'images/3.png', 'images/1.png', 'images/1.png'],
+                    'thumbnail'     : ['images/6.png', 'images/5.png', 'images/4.png', 'images/3.png', 'images/2.png'],
+                    'large'         : ['images/6.png', 'images/5.png', 'images/4.png', 'images/3.png', 'images/2.png'],
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'DownloadPDF', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>', 'url':'http://www.jqueryscript.net'}
                     ],
                     'tags'          : ['University Projects']
                 },
@@ -29,7 +29,7 @@
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>'}
                     ],
                     'tags'          : ['Software Projects']
                 },
@@ -41,7 +41,7 @@
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>'}
                     ],
                     'tags'          : ['University Projects', 'Software Projects']
                 },
@@ -53,7 +53,7 @@
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>'}
                     ],
                     'tags'          : ['University Projects']
                 },
@@ -65,7 +65,7 @@
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>'}
                     ],
                     'tags'          : ['Software Projects']
                 },
@@ -77,7 +77,7 @@
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>'}
                     ],
                     'tags'          : ['Life Projects']
                 },
@@ -89,7 +89,7 @@
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>'}
                     ],
                     'tags'          : ['University Projects']
                 },
@@ -101,7 +101,7 @@
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>'}
                     ],
                     'tags'          : ['Life Projects']
                 },
@@ -113,7 +113,7 @@
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>'}
                     ],
                     'tags'          : ['Software Projects']
                 },
@@ -125,7 +125,7 @@
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>'}
                     ],
                     'tags'          : ['University Projects']
                 },
@@ -137,7 +137,7 @@
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>'}
                     ],
                     'tags'          : ['Life Projects']
                 },
@@ -149,7 +149,7 @@
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>'}
                     ],
                     'tags'          : ['University Projects', 'Software Projects']
                 },
@@ -161,7 +161,7 @@
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>'}
                     ],
                     'tags'          : ['Life Projects']
                 },
@@ -173,7 +173,7 @@
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>'}
                     ],
                     'tags'          : ['Software Projects']
                 },
@@ -185,7 +185,7 @@
                     'button_list'   :
                     [
                         { 'title':'Demo', 'url' : 'http://www.jqueryscript.net' },
-                        { 'title':'Download', 'url':'http://www.jqueryscript.net'}
+                        { 'title':'Download  <span class="icon fa-file-pdf-o"/>'}
                     ],
                     'tags'          : ['Life Projects', 'Software Projects']
                 }
