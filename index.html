@@ -8,16 +8,20 @@
   -->
 <html>
   <head>
+	<script src="assets/js/jquery.min.js"></script>
     <title>Samuel Nygaard</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css"/>
+	<link rel="stylesheet" href="assets/css/elastic_grid.min.css"/>
     <noscript>
       <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
 	<script src="assets/js/modernizr.js"></script>
+	<script src="assets/js/classie.js"></script>
+	<script type="text/javascript" src="assets/js/elastic_grid.encode.js"></script>
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="assets/css/ie8.css" />
     <![endif]-->
@@ -62,35 +66,14 @@
           <p>
             Will be updatet soon.
           </p>
-          <section>
-            <div class="row">
-              <div class="4u 12u$(mobile)">
-                <a href="#" class="image fit focus"><img src="images/1.png" alt=""></a>
-              </div>
-              <div class="4u 12u$(mobile)">
-                <a href="#" class="image fit focus"><img src="images/2.png" alt=""></a>
-              </div>
-              <div class="4u$ 12u$(mobile)">
-                <a href="#" class="image fit focus"><img src="images/3.png" alt=""></a>
-              </div>
-              <div class="4u 12u$(mobile)">
-                <a href="#" class="image fit focus"><img src="images/4.png" alt=""></a>
-              </div>
-              <div class="4u 12u$(mobile)">
-                <a href="#" class="image fit focus"><img src="images/5.png" alt=""></a>
-              </div>
-              <div class="4u$ 12u$(mobile)">
-                <a href="#" class="image fit focus"><img src="images/6.png" alt=""></a>
-              </div>
-            </div>
-          </section>
+		  <div id="elastic-grid"></div>
         </article>
 		<!-- CV --> 
         <article id="cv" class="panel">
 		  <!-- Animated Vertical Timeline with jQuery and CSS3: http://www.jqueryscript.net/other/Create-A-Responsive-Animated-Vertical-Timeline-with-jQuery-CSS3.html -->
           <section id="cd-timeline" class="cd-container">
 			  <div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-red"> <img class="svg" src="assets/css/images/job.svg"> </div>
+				<div class="cd-timeline-img cd-red"> <img class="svg" src="assets/images/job.svg"> </div>
 				<!-- cd-timeline-img -->
 				<div class="cd-timeline-content">
 				  <h2>Student developer at Enversion</h2>
@@ -101,7 +84,7 @@
 			  </div>
 			  <!-- cd-timeline-block -->
 			  <div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-green"> <img class="svg" src="assets/css/images/edu.svg"> </div>
+				<div class="cd-timeline-img cd-green"> <img class="svg" src="assets/images/edu.svg"> </div>
 				<!-- cd-timeline-img -->
 				<div class="cd-timeline-content">
 				  <h2>Aalborg Universitet - Master of Science (M.Sc.), Computer Science</h2>
@@ -112,7 +95,7 @@
 			  </div>
 			  <!-- cd-timeline-block -->
 			  <div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-red"> <img class="svg" src="assets/css/images/job.svg"> </div>
+				<div class="cd-timeline-img cd-red"> <img class="svg" src="assets/images/job.svg"> </div>
 				<!-- cd-timeline-img -->
 				<div class="cd-timeline-content">
 				  <h2>IT Technician at Data Discount</h2>
@@ -123,7 +106,7 @@
 			  </div>
 			  <!-- cd-timeline-block -->
 			  <div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-green"> <img class="svg" src="assets/css/images/edu.svg"> </div>
+				<div class="cd-timeline-img cd-green"> <img class="svg" src="assets/images/edu.svg"> </div>
 				<!-- cd-timeline-img -->
 				<div class="cd-timeline-content">
 				  <h2>Aalborg Universitet - Bachalor of Science (B.Sc.), Computer Science</h2>
@@ -134,7 +117,7 @@
 			  </div>
 			  <!-- cd-timeline-block -->
 			  <div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-red"> <img class="svg" src="assets/css/images/job.svg"> </div>
+				<div class="cd-timeline-img cd-red"> <img class="svg" src="assets/images/job.svg"> </div>
 				<!-- cd-timeline-img -->
 				<div class="cd-timeline-content">
 				  <h2>IT Technician at <br>Viborg Computer Center</h2>
@@ -145,7 +128,7 @@
 			  </div>
 			  <!-- cd-timeline-block -->
 			  <div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-green"> <img class="svg" src="assets/css/images/edu.svg"> </div>
+				<div class="cd-timeline-img cd-green"> <img class="svg" src="assets/images/edu.svg"> </div>
 				<!-- cd-timeline-img -->
 				<div class="cd-timeline-content">
 				  <h2>Viborg Tekniske Gymnasium - The Higher Technical Examination (HTX)</h2>
@@ -162,9 +145,7 @@
           <header>
             <h2>Skills</h2>
           </header>
-          <p>
-            Will be updatet soon.
-          </p>
+          <div style="display:none;" id="skill-chart"></div>
         </article>
         <!-- bio --> 
         <article id="bio" class="panel">
@@ -226,12 +207,15 @@
       </div>
     </div>
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/skel-viewport.min.js"></script>
     <script src="assets/js/util.js"></script>
 	<script src="assets/js/ga.js"></script>
 	<script src="assets/js/analytics.js"></script>
+	<script src="assets/js/chart.min.js"></script>
+	<script src="assets/js/pretty-doughtnut.js"></script>
+	<script src="assets/js/modernizr.custom.js"></script>
+	<script src="assets/js/util_grid.js"></script>
     <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
   </body>
