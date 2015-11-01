@@ -29,6 +29,7 @@
 	/*******
 		Timeline
 	********/
+
 	
 	#cd-timeline {
   position: relative;
@@ -45,7 +46,7 @@
   left: 18px;
   height: 100%;
   width: 4px;
-  background: #AACEE0;
+  background: #BAD7E6;
 }
 @media only screen and (min-width: 1170px) {
 
@@ -93,7 +94,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px #AACEE0, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 4px #BAD7E6, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
 .cd-timeline-img img {
@@ -187,10 +188,10 @@ cd-bounce-1 {  0% {
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
-  background: #AACEE0;
+  background: #BAD7E6;
   border-radius: 0.25em;
   padding: 1em;
-  box-shadow: 0 3px 0 #AACEE0;
+  box-shadow: 0 3px 0 #BAD7E6;
  *zoom: 1;
 }
 
@@ -243,7 +244,7 @@ cd-bounce-1 {  0% {
   height: 0;
   width: 0;
   border: 7px solid transparent;
-  border-right: 7px solid #AACEE0;
+  border-right: 7px solid #BAD7E6;
 }
 @media only screen and (min-width: 768px) {
 
@@ -275,7 +276,7 @@ cd-bounce-1 {  0% {
   top: 24px;
   left: 100%;
   border-color: transparent;
-  border-left-color: #AACEE0;
+  border-left-color: #BAD7E6;
 }
 
 .cd-timeline-content .cd-read-more { float: left; }
@@ -296,7 +297,7 @@ cd-bounce-1 {  0% {
   left: auto;
   right: 100%;
   border-color: transparent;
-  border-right-color: #AACEE0;
+  border-right-color: #BAD7E6;
 }
 
 .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more { float: right; }
