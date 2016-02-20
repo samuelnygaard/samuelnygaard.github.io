@@ -33,7 +33,7 @@
     margin-bottom: 15px;
     width: 100%;
     background: #eee;
-    height: 35px;
+    height: 45px;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -52,7 +52,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 185px;
+    width: 130px;
+	
     /*font-weight: bold;*/
     font-size: 15px;
     color: #ffffff;
@@ -69,8 +70,9 @@
     display: block;
     background: rgba(0, 0, 0, 0.1);
     padding: 0 20px;
-    height: 35px;
-    line-height: 35px;
+    height: 45px;
+	word-wrap: break-word;
+    line-height: 22px;
     -webkit-border-top-left-radius: 3px;
     -webkit-border-bottom-left-radius: 3px;
     -moz-border-radius-topleft: 3px;
@@ -79,7 +81,7 @@
     border-bottom-left-radius: 3px;
 }
 .skillbar-bar {
-    height: 35px;
+    height: 45px;
     width: 0px;
     background: #6adcfa;
     border-radius: 3px;
@@ -91,8 +93,8 @@
     right: 10px;
     top: 0;
     font-size: 21px;
-    height: 35px;
-    line-height: 35px;
+    height: 45px;
+    line-height: 45px;
     color: #ffffff;
     color: rgba(0, 0, 0, 0.45);
 }
@@ -168,13 +170,13 @@
 }
 .cd-timeline-img img {
     display: block;
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     position: relative;
     left: 50%;
     top: 50%;
-    margin-left: -17px;
-    margin-top: -17px;
+    margin-left: -21px;
+    margin-top: -21px;
 }
 .cd-timeline-img.cd-red {
     background: #CC6168;

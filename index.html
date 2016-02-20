@@ -17,13 +17,10 @@
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/product-style.css">
-    <link rel="stylesheet" href="assets/css/elastic_grid.min.css">
     <noscript>
       <link rel="stylesheet" href="assets/css/noscript.css">
     </noscript>
     <script src="assets/js/modernizr.js"></script>
-    <script src="assets/js/classie.js"></script>
-    <script type="text/javascript" src="assets/js/elastic_grid.encode.js"></script>
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="assets/css/ie8.css">
     <![endif]-->
@@ -39,7 +36,7 @@
             <a href="#me" class="icon fa-home active"><span>Home</span></a>
             <a href="#projects" class="icon fa-folder"><span>Projects</span></a>
             <a href="#cv" class="icon fa-graduation-cap"><span>Resume</span></a>
-            <a href="#skills" class="icon fa-wrench"><span>Skills</span></a>
+            <a href="#skills" id="skills" class="icon fa-wrench"><span>Skills</span></a>
             <a href="#bio" class="icon fa-info-circle"><span>Biography</span></a>
             <a href="#download" class="icon fa-share-alt-square"><span>Download</span></a>
             <a href="https://www.linkedin.com/in/samuel-nygaard-37573b8a" target="_blank" class="icon fa-linkedin-square"><span>LinkedIn</span></a>
@@ -250,14 +247,14 @@
                 </p>
                 <!-- Skillbar (source: http://codepen.io/tamak/pen/hzEer) -->
                 <div class="skillbar clearfix " data-percent="75%">
-                    <div class="skillbar-title" style="background: #d35400;"><span>Databases / SQL</span></div>
+                    <div class="skillbar-title" style="background: #d35400;"><span>SQL Databases</span></div>
                     <div class="skillbar-bar" style="background: #e67e22;"></div>
                     <!--<div class="skill-bar-percent">65%</div>-->
                 </div>
                 <!-- End Skill Bar -->
 
                 <div class="skillbar clearfix " data-percent="50%">
-                    <div class="skillbar-title" style="background: #2980b9;"><span>Programming</span></div>
+                    <div class="skillbar-title" style="background: #2980b9;"><span>Software Programming</span></div>
                     <div class="skillbar-bar" style="background: #3498db;"></div>
                     <!--<div class="skill-bar-percent">65%</div>-->
                 </div>
@@ -265,7 +262,7 @@
 
                 <div class="skillbar clearfix " data-percent="65%">
                     <div class="skillbar-title" style="background: #2c3e50;"><span>Project Management</span></div>
-                    <div class="skillbar-bar" style="background: #2c3e50;"></div>
+                    <div class="skillbar-bar" style="background: #3f5a73;"></div>
                     <!--<div class="skill-bar-percent">65%</div>-->
                 </div>
                 <!-- End Skill Bar -->
@@ -277,14 +274,14 @@
                 </div>
                 <!-- End Skill Bar -->
 
-                <div class="skillbar clearfix " data-percent="40%">
+                <div class="skillbar clearfix " data-percent="45%">
                     <div class="skillbar-title" style="background: #333333;"><span>Machine Learning</span></div>
                     <div class="skillbar-bar" style="background: #525252;"></div>
                     <!--<div class="skill-bar-percent">65%</div>-->
                 </div>
                 <!-- End Skill Bar -->
 
-                <div class="skillbar clearfix " data-percent="30%">
+                <div class="skillbar clearfix " data-percent="40%">
                     <div class="skillbar-title" style="background: #27ae60;"><span>Distributed Systems</span></div>
                     <div class="skillbar-bar" style="background: #2ecc71;"></div>
                     <!--<div class="skill-bar-percent">65%</div>-->
@@ -292,7 +289,7 @@
                 <!-- End Skill Bar -->
 
                 <div class="skillbar clearfix " data-percent="78%">
-                    <div class="skillbar-title" style="background: #124e8c;"><span>Software Development</span></div>
+                    <div class="skillbar-title" style="background: #124e8c;"><span>Software <br>Development</span></div>
                     <div class="skillbar-bar" style="background: #4288d0;"></div>
                     <!--<div class="skill-bar-percent">65%</div>-->
                 </div>
@@ -364,10 +361,8 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/ga.js"></script>
     <script src="assets/js/analytics.js"></script>
-    <script src="assets/js/pretty-doughtnut.js"></script>
-    <script src="assets/js/velocity.min.js"></script>
+    <script src="assets/js/velocity.min.js"></script> 
     <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/js/util_grid.js"></script>
     <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/product-review.js"></script>

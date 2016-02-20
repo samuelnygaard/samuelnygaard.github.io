@@ -24,7 +24,6 @@
     /********
     	Skillsbar (source: http://codepen.io/tamak/pen/hzEer)
     ********/
-
     jQuery(document).ready(function() {
         jQuery('.skillbar').each(function() {
             jQuery(this).find('.skillbar-bar').animate({
@@ -33,6 +32,20 @@
         });
     });
 
+    jQuery(document).ready(function() {
+        $("#skills").click(function() {
+            jQuery('.skillbar').each(function() {
+                jQuery(this).find('.skillbar-bar').animate({
+                    width: '0%'
+                }, 1);
+            });
+            jQuery('.skillbar').each(function() {
+                jQuery(this).find('.skillbar-bar').animate({
+                    width: jQuery(this).attr('data-percent')
+                }, 4000);
+            });
+        });
+    });
 
     /********
     	Contact formula
