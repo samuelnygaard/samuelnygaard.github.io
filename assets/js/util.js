@@ -20,51 +20,19 @@
             }
         });
     });
-	
-	/********
-		Skills circels
-	********/
-	$(window).load(function() {
-		doughnutWidget.options = {
-			container: $('#skill-chart'),
-			width: 100,
-			height: 100,
-			class: 'myClass',
-			cutout: 50
-		};
 
-		doughnutWidget.render(data());
+    /********
+    	Skillsbar (source: http://codepen.io/tamak/pen/hzEer)
+    ********/
 
-		setInterval(init, 2000);
-	});
+    jQuery(document).ready(function() {
+        jQuery('.skillbar').each(function() {
+            jQuery(this).find('.skillbar-bar').animate({
+                width: jQuery(this).attr('data-percent')
+            }, 6000);
+        });
+    });
 
-	function init() {
-		doughnutWidget.render(data());
-	}
-
-	function data() {
-		var data = {
-			pending: {
-				val: Math.round(Math.random() * 100),
-				color: '#57B4F2',
-				click: function(e) {
-					console.log('hi');
-				}
-			},
-			delivered: {
-				val: Math.round(Math.random() * 100),
-				color: '#6DED5C'
-			},
-			delayed: {
-				val: Math.round(Math.random() * 100),
-				color: '#E63329',
-				link: 'http://www.google.com'
-			}
-		};
-
-		return data;
-	}
-	
 
     /********
     	Contact formula
@@ -86,9 +54,9 @@
         var name = $("#name").val(); // get name field value
         var subject = $("#subject").val(); // get subject field value
         var msg = $("#msg").val(); // get message field value
-		debugger;
+        debugger;
         var api = readAPI('./assets/js/text.json');
-		console.log(api);
+        console.log(api);
         $.ajax({
                 type: "POST",
                 url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -124,13 +92,13 @@
     });
 
     function readAPI(file) {
-		$.getJSON( file, function( data ) {
-		  var api = '';
-		  $.each( data, function( key, val ) {
-			api += val;
-		  });
-		  return api;
-		});
+        $.getJSON(file, function(data) {
+            var api = '';
+            $.each(data, function(key, val) {
+                api += val;
+            });
+            return api;
+        });
     }
 
 
@@ -257,13 +225,13 @@
 
                 // Reset scroll position.
                 if (config.resetScroll)
-                    //$this.scrollTop(0);
+                //$this.scrollTop(0);
 
                 // Reset forms.
-                if (config.resetForms)
-                    $this.find('form').each(function() {
-                        this.reset();
-                    });
+                    if (config.resetForms)
+                        $this.find('form').each(function() {
+                            this.reset();
+                        });
 
             }, config.delay);
 
@@ -714,20 +682,20 @@
         });
 
     };
-	
-	(function(i, s, o, g, r, a, m) {
-		i['GoogleAnalyticsObject'] = r;
-		i[r] = i[r] || function() {
-			(i[r].q = i[r].q || []).push(arguments)
-		}, i[r].l = 1 * new Date();
-		a = s.createElement(o),
-			m = s.getElementsByTagName(o)[0];
-		a.async = 1;
-		a.src = g;
-		m.parentNode.insertBefore(a, m)
-	})(window, document, 'script', 'assets/js/analytics.js', 'ga');
 
-	ga('create', 'UA-69257302-1', 'auto');
-	ga('send', 'pageview');
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'assets/js/analytics.js', 'ga');
+
+    ga('create', 'UA-69257302-1', 'auto');
+    ga('send', 'pageview');
 
 })(jQuery);
