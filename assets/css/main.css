@@ -52,9 +52,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 110px;
-    font-weight: bold;
-    font-size: 13px;
+    width: 185px;
+    /*font-weight: bold;*/
+    font-size: 15px;
     color: #ffffff;
     background: #6adcfa;
     -webkit-border-top-left-radius: 3px;
@@ -65,6 +65,7 @@
     border-bottom-left-radius: 3px;
 }
 .skillbar-title span {
+	text-align: center;
     display: block;
     background: rgba(0, 0, 0, 0.1);
     padding: 0 20px;
@@ -89,11 +90,11 @@
     position: absolute;
     right: 10px;
     top: 0;
-    font-size: 11px;
+    font-size: 21px;
     height: 35px;
     line-height: 35px;
     color: #ffffff;
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.45);
 }
 /*******
 		Timeline
