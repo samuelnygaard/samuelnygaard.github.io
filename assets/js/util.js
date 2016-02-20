@@ -28,7 +28,7 @@
         jQuery('.skillbar').each(function() {
             jQuery(this).find('.skillbar-bar').animate({
                 width: jQuery(this).attr('data-percent')
-            }, 4000);
+            }, 0);
         });
     });
 
@@ -37,10 +37,8 @@
             jQuery('.skillbar').each(function() {
                 jQuery(this).find('.skillbar-bar').animate({
                     width: '0%'
-                }, 1);
-            });
-            jQuery('.skillbar').each(function() {
-                jQuery(this).find('.skillbar-bar').animate({
+                }, 0);
+				jQuery(this).find('.skillbar-bar').animate({
                     width: jQuery(this).attr('data-percent')
                 }, 4000);
             });
