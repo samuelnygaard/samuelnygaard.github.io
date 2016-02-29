@@ -1,4 +1,7 @@
 (function($) {
+	
+	// Update © <year> to current year
+	$('#CP-year').html(new Date().getFullYear());
 
     /********
     	Resume timeline
@@ -60,14 +63,10 @@
     }
 
     $("#contact_form").submit(function() {
-        var myEmail = "teamnygaard@gmail.com";
         var email = $("#email").val(); // get email field value
         var name = $("#name").val(); // get name field value
         var subject = $("#subject").val(); // get subject field value
         var msg = $("#msg").val(); // get message field value
-        debugger;
-        var api = readAPI('./assets/js/text.json');
-        console.log(api);
         $.ajax({
                 type: "POST",
                 url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -82,7 +81,7 @@
                         'subject': ('[WEBSITE]: ' + subject),
                         'text': msg,
                         'to': [{
-                            'email': myEmail,
+                            'email': 'teamnygaard@gmail.com',
                             'name': 'Samuel Nygaard',
                             'type': 'to'
                         }]
