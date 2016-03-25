@@ -1,1 +1,172 @@
-[{"title":"Push-ups","id":1},{"title":"Pull-ups","id":2},{"title":"Deadlift","id":3},{"title":"Bench press","id":4}]
+{
+   "exercises":[
+      {
+         "id":0,
+         "name":"Crunches",
+         "muscle":"Abdominals (stomach muscles)",
+         "avatar":"http://image005.flaticon.com/1/svg/3/3731.svg",
+         "img":[
+            {
+               "path":"img/exercises/crunches1.gif",
+               "source":"https://www.youtube.com/watch?v=i-xRzmPWxaw"
+            },
+            {
+               "path":"img/exercises/crunches2.gif",
+               "source":"https://www.youtube.com/watch?v=_ScJYz8h7Ko"
+            }
+         ],
+         "instructions":[
+            {
+               "instruction":"Lay flat on your back with your knees bent and your feet flat on the ground, about a foot from your lower back."
+            },
+            {
+               "instruction":"Place your fingertips on your temples with your palms facing out."
+            },
+            {
+               "instruction":"Draw your belly into the base of your spine to engage the muscles, then raise your head and shoulders off the floor. Return to starting position and repeat."
+            }
+         ]
+      },
+      {
+         "id":1,
+         "name":"Deadlift",
+         "muscle":"Midback muscle",
+         "avatar":"https://cdn3.iconfinder.com/data/icons/workouts/500/muscle-128.png",
+         "img":[
+            {
+               "path":"img/exercises/deadlift1.gif",
+               "source":"https://www.youtube.com/watch?v=1rLHadKaL_k"
+            },
+            {
+               "path":"img/exercises/deadlift2.gif",
+               "source":"https://www.youtube.com/watch?v=H1kFJ3sofPE"
+            }
+         ],
+         "instructions":[
+            {
+               "instruction":"Stand with your mid-foot under the bar and grip the bar with your hands, about a shoulder width apart."
+            },
+            {
+               "instruction":"Bend your knees, then lift the bar by straightening your back. It is important to keep your back straight."
+            },
+            {
+               "instruction":"Stand to your full height and hold."
+            },
+            {
+               "instruction":"Lower the bar to the floor by bending your knees and keeping your back straight."
+            }
+         ]
+      },
+      {
+         "id":2,
+         "name":"Dumbbell Biceps Curl",
+         "muscle":"Biceps",
+         "avatar":"http://image005.flaticon.com/1/svg/38/38043.svg",
+         "img":[
+            {
+               "path":"img/exercises/biceps_curl1.gif",
+               "source":"https://www.youtube.com/watch?v=myW3r9AYWwI"
+            },
+            {
+               "path":"img/exercises/biceps_curl2.gif",
+               "source":"https://www.youtube.com/watch?v=H1kFJ3sofPE"
+            }
+         ],
+         "instructions":[
+            {
+               "instruction":"Stand up straight with a dumbbell in each hand at arm's length."
+            },
+            {
+               "instruction":"Raise one dumbbell and twist your forearm until it is vertical and your palm faces the shoulder."
+            },
+            {
+               "instruction":"Lower to original position and repeat with opposite arm."
+            }
+         ]
+      },
+      {
+         "id":3,
+         "name":"Standing Calf Raises",
+         "muscle":"Calves",
+         "avatar":"http://image005.flaticon.com/1/svg/38/38043.svg",
+         "img":[
+            {
+               "path":"https://musclewiki.org/exercises/Calves/StandingCalfRaises-Front-021316.gif",
+               "source":"https://www.youtube.com/watch?v=UOVRxVYExss"
+            },
+            {
+               "path":"https://musclewiki.org/exercises/Calves/StandingCalfRaisesWide-Front-021316.gif",
+               "source":"https://www.youtube.com/watch?v=PznzEimTfgY"
+            }
+         ],
+         "instructions":[
+            {
+               "instruction":"Adjust the machine in accordance with your height, and place your shoulders underneath the padded lever."
+            },
+            {
+               "instruction":"The balls of your feet should be supporting your weight on the calve block, your heels extending off of it."
+            },
+            {
+               "instruction":"Extend your heels upwards while keeping your knees stationary, and pause at the contracted position."
+            },
+            {
+               "instruction":"Slowly return to the starting position. Repeat."
+            }
+         ]
+      },
+      {
+         "id":4,
+         "name":"Seated Calf Raises",
+         "muscle":"Calves",
+         "avatar":"http://image005.flaticon.com/1/svg/38/38043.svg",
+         "img":[
+            {
+               "path":"https://musclewiki.org/exercises/Calves/SeatedCalfRaises-Front-021316.gif",
+               "source":"https://www.youtube.com/watch?v=IdzC0c07iX8"
+            },
+            {
+               "path":"https://musclewiki.org/exercises/Calves/SeatedCalfRaises-side-021316.gif",
+               "source":"https://www.youtube.com/watch?v=kK0JLHxcLFk"
+            }
+         ],
+         "instructions":[
+            {
+               "instruction":"Get comfortable on the machine, then place your lower thighs beneath the padded lever. Place your toes and the balls of your feet onto the foot supports."
+            },
+            {
+               "instruction":"Prevent the weight from slipping forward by gripping the handles, and release the safety bar. Lower the weight until your calves are extended."
+            },
+            {
+               "instruction":"Push your heels up to lift the padded lever, and hold the contracted position, then slowly lower back down to the starting position. Repeat."
+            }
+         ]
+      },
+      {
+         "id":5,
+         "name":"Bench Press",
+         "muscle":"Chest muscle",
+         "avatar":"http://www.makeoverfitness.com/images/stories/close-grip-barbell-bench-press-start.jpg",
+         "img":[
+            {
+               "path":"img/exercises/benchpress1.gif",
+               "source":"https://www.youtube.com/watch?v=NLDhyIZodR8"
+            },
+            {
+               "path":"img/exercises/benchpress2.gif",
+               "source":"https://www.youtube.com/watch?v=52DBC-5SoC0"
+            }
+         ],
+         "instructions":[
+            {
+               "instruction":"Lay flat on the bench with your feet on the ground. With straight arms unrack the bar."
+            },
+            {
+               "instruction":"Lower the bar to your mid chest."
+            },
+            {
+               "instruction":"Raise the bar until you've locked your elbows."
+            }
+         ]
+      }
+   ]
+}
