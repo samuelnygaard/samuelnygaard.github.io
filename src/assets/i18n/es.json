@@ -1,0 +1,581 @@
+{
+	"GLOBAL": {
+		"name": "Nombre",
+		"email": "Email",
+		"password": "Contraseña",
+		"date_of_birth": "Fecha de nacimiento",
+		"year_of_birth": "Año de nacimiento",
+		"phonenumber": "Teléfono",
+		"years": "Años",
+		"date": "Fecha",
+		"gender": "Sexo",
+		"template": "Mapa corporal",
+		"timezone": "Zona horaria",
+		"set_gender": "Seleccione el sexo",
+		"set_template": "Seleccione el mapa corporal",
+		"Child": "Niño",
+		"Male": "Hombre",
+		"Female": "Mujer",
+		"Other": "Otro",
+		"search": "Buscador",
+		"shortCode": "Código NP",
+		"height": "Altura",
+		"age": "Edad",
+		"cm": "cm",
+		"weight": "Peso",
+		"kg": "kg",
+		"note_optional": "Nota (opcional)",
+		"note": "Nota",
+		"notes": "Notas",
+		"create_patient": "Crear paciente",
+		"save": "Guardar",
+		"delete": "Borrar",
+		"remove": "Eliminar",
+		"disable": "Desactivar",
+		"enable": "Activar",
+		"address": "Dirección",
+		"city": "Ciudad",
+		"zip": "Código postal",
+		"country": "País",
+		"state": "Comunidad/región",
+		"refresh": "Refrescar",
+		"periode": "Período",
+		"start_date": "Fechas de inicio",
+		"end_date": "Fecha final",
+		"creation_date": "Fecha de creación",
+		"export_patient": "Exportar paciente",
+		"cancel": "Cancelar",
+		"total_pixels": "Número total de píxeles",
+		"edit": "Editar",
+		"change_password": "Cambiar la contraseña",
+		"until": "hasta",
+		"close": "Cerrar",
+		"description": "Descripción",
+		"submit": "Enviar",
+		"change_email": "Cambiar el email",
+		"back": "Volver",
+		"website": "Página web",
+		"company_reg_no": "Número de registro de empresa",
+		"create": "Crear paciente",
+		"only_whole_numbers": "Escriba el año de nacimiento del paciente:",
+		"show_more": "Mostrar más",
+		"show": "Mostrar  ",
+		"export": "Exportar",
+		"clinic": "Clínica",
+		"total": "Total",
+		"enable_chart": "Activar gráfico",
+		"disable_chart": "Desactivar gráfico",
+		"ago": "hace",
+		"summary": "Sumario",
+		"yes": "Si",
+		"no": "No",
+		"login_info": "Información de acceso",
+		"select": "Seleccionar",
+		"pay": "Pago",
+		"download": "Descargar",
+		"end": "Final",
+		"of": "de",
+		"date_format": "Formato de fecha",
+		"time_format": "Formato de tiempo",
+		"discard_changes": "Descartar los cambios",
+		"clinic_manager_access": "Acceso del administrador de la clínica"
+	},
+	"MESSAGES": {
+		"error": "Error",
+		"success": "Éxito",
+		"remember": "Recuerda de",
+		"dismiss": "Ignorar",
+		"something_went_wrong": "Algo salió mal, inténtelo de nuevo o contacte a support@aglancesolutions.com.",
+		"verify_email": "Verificar el email",
+		"charts_successfully_saved": "Dibujos guardados con éxito",
+		"reset_password_success": "Recibirá un email {{email}} con un enlace para restablecer su contraseña.",
+		"verify_email_info": "Recibirá un email {{email}} con un enlace para confirmar su email.",
+		"password_set_successfully": "Contraseña establecida con éxito",
+		"ininvalid_password": "Contraseña inválida.",
+		"invalid_email": "Email inválido.",
+		"password_format": "El formato de contraseña no es válido.",
+		"password_length": "La contraseña debe tener al menos 8 caracteres.",
+		"password_uppercase": "La contraseña debe contener al menos una letra mayúscula.",
+		"password_lowercase": "La contraseña debe contener al menos una letra minúscula.",
+		"password_digit": "La contraseña debe contener al menos un número.",
+		"password_successfully_changed": "La contraseña ha cambiado con éxito.",
+		"invalid_token": "Código inválido, intente restablecer la contraseña nuevamente.",
+		"email_password_incorrect": "El email o la contraseña son incorrectos.",
+		"user_lockedout": "Este usuario ha sido desactivado. Contacte con su administrador de clínica para reactivarlo.",
+		"email_confirmed": "Email confirmado.",
+		"email_not_valid": "El formato del email no es válido",
+		"email_not_confirmed": "El email no está confirmado.",
+		"confirm_email": "Se ha enviado un email a {{email}}, haga clic en el enlace para cambiar su email.",
+		"email_changed": "Su email ha sido cambiado con éxito a:",
+		"drawing_are_emtpy_nothing_saved": "Los dibujos están vacíos, nada se guarda.",
+		"max_40_chars": "(40 caracteres)",
+		"overlapping_schedules": "El calendario superpuesto de dibujos no está permitido.",
+		"accept_cookies": "Al continuar navegando por el sitio, acepta nuestro uso de cookies. ",
+		"privacy_policy": "Descubra más en nuestra",
+		"token_expired": "Política de privacidad"
+	},
+	"TABLE": {
+		"no_schedules": "El código ha expirado, se ha enviado una nueva \"Contraseña de restablecimiento\" a su email.",
+		"no_patients": "No hay calendario",
+		"no_personnel": "No hay pacientes",
+		"total": "No hay personal"
+	},
+	"FORM": {
+		"valid_email": "total",
+		"email_required": "Por favor introduzca un email válido",
+		"name_required": "El email es requerido",
+		"birthday_required": "El nombre es obligatorio",
+		"invalid_password": "La fecha de nacimiento es obligatoria",
+		"password_required": "La contraseña debe contener: una letra minúscula, una letra mayúscula y un número.",
+		"password_length": "Se requiere contraseña",
+		"password_match": "La contraseña debe tener al menos 8 caracteres.",
+		"required": "Las contraseñas no coinciden.",
+		"pattern": "El patrón está mal",
+		"change": "Cambiar"
+	},
+	"DIALOGS": {
+		"confirm": {
+			"cancel_subscription": "¿Seguro que quieres cancelar tu suscripción?",
+			"acceptButton": "Si",
+			"cancelButton": "No"
+		},
+		"delete_promt": {
+			"schedule": "Programar horario",
+			"title": "Borrar",
+			"message": "¿Estás seguro de que quieres eliminar esto?",
+			"cancelButton": "Cancelar",
+			"acceptButton": "Borrar"
+		},
+		"more_body_charts": {
+			"title": "Solo se usa la primera perspectiva.",
+			"message": "Puede dibujar en múltiples mapas corporales:",
+			"cancelButton": "Guardar de todos modos",
+			"acceptButton": "Mostrar las vistas corporales"
+		},
+		"start_tour": {
+			"title": "¿Quieres hacer un recorrido?",
+			"message": "Comenzar un tutorial breve en la aplicación.",
+			"cancelButton": "Omitir",
+			"acceptButton": "Empezar el recorrido"
+		},
+		"nothing_saved": {
+			"message": "El tutorial ha terminado. Nada se ha guardado del tutorial.",
+			"closeButton": "De acuerdo"
+		}
+	},
+	"TOOLTIP": {
+		"menu": "Menú",
+		"save": "Guardar  ",
+		"zoom": "Zoom",
+		"body_chart": "Visualización del cuerpo",
+		"pain_type": "Tipo de dolor",
+		"pensize": "Tamaño de la punta del lapicero",
+		"undo": "Deshacer",
+		"redo": "Rehacer",
+		"change_language": "Cambiar el idioma",
+		"first": "Primero",
+		"previous": "Anterior",
+		"play": "Reproducir",
+		"pause": "Pausar",
+		"next": "Siguiente",
+		"last": "Último",
+		"draw": "Dibujar",
+		"drag": "Arrastrar",
+		"resetZoom": "Reestablecer el zoom",
+		"zoomIn": "Acercar",
+		"zoomOut": "Disminuir el zoom"
+	},
+	"TOUR": {
+		"start": {
+			"title": "Recorrido de la aplicación",
+			"content": "Haga clic en el ícono de pregunta para comenzar nuevamente el recorrido de la aplicación. Haga clic en la flecha verde para comenzar"
+		},
+		"toggleZoom": {
+			"title": "Dibujar",
+			"content": "Cambia entre arrastrar el mapa corporal y dibujar en el mapa corporal (Ctrl + D)"
+		},
+		"resetZoom": {
+			"title": "Reestablecer el tamaño",
+			"content": "El mapa corporal se adapta a la pantalla (Ctrl + F)"
+		},
+		"zoomIn": {
+			"title": "Acercarse",
+			"content": "Expandir el área de dibujo (+)"
+		},
+		"zoomOut": {
+			"title": "Disminuir el zoom",
+			"content": "Visualizar el mapa corporal más grande en la pantalla (-)"
+		},
+		"redo": {
+			"title": "Rehacer",
+			"content": "Rehacer la última línea del dibujo (Ctrl + Y)"
+		},
+		"undo": {
+			"title": "Deshacer",
+			"content": "Deshacer la última línea del dibujo (Ctrl + Z)"
+		},
+		"penSize": {
+			"title": "Tamaño del lapicero",
+			"content": "Cambiar el grosor de la línea de dibujo"
+		},
+		"painType": {
+			"title": "Tipo de dolor",
+			"content": "Cambiar dolor por tipos de malestar"
+		},
+		"templates": {
+			"title": "Visualización del cuerpo",
+			"content": "Elija las visualizaciones del cuerpo frontal, posterior, izquierdo y derecho"
+		},
+		"save": {
+			"title": "Enviar todo",
+			"content": "Guardar todos los dibujos (Ctrl + S)"
+		},
+		"nextTemplate": {
+			"title": "Siguiente visualización",
+			"content": "Los botones superiores le permiten cambiar entre las vistas del cuerpo (→)"
+		},
+		"fillAreas": {
+			"title": "Instrucciones de dibujo",
+			"content": "Rellenar toda el área que represente la ubicación de su dolor o malestar"
+		},
+		"tourError": {
+			"title": "Sin círculos o contornos",
+			"content": "Dibujar círculos en la zona pueden perder información importante. Por favor, rellene todas las áreas"
+		},
+		"patient-list": {
+			"title": "Listado de pacientes",
+			"content": "En la sección Pacientes, puede buscar y encontrar a todos los pacientes registrados"
+		},
+		"add-patient": {
+			"title": "Añadir paciente",
+			"content": "Crear un nuevo paciente"
+		},
+		"change-language": {
+			"title": "Cambiar el idioma",
+			"content": "Haga clic aquí para cambiar el idioma"
+		},
+		"start-timeline": {
+			"title": "Cronología",
+			"content": "Haga clic en el botón de la línea de tiempo para ver dibujos de dolor actuales y pasados"
+		},
+		"new-drawing": {
+			"title": "Nuevo dibujo",
+			"content": "Crear un nuevo dibujo con o para el paciente"
+		},
+		"new-schedule": {
+			"title": "Crear un nuevo horario",
+			"content": "Crear un horario de dibujos para un período de tiempo predefinido y una cantidad de dibujos por día"
+		},
+		"export-patient": {
+			"title": "Exportar paciente",
+			"content": "Exportar los dibujos de dolor seleccionados y cálculo de píxeles "
+		},
+		"menu": {
+			"title": "Menú",
+			"content": "Haga clic en el botón de menú para cerrar la sesión o para ver opciones adicionales, como comentarios y condiciones del servicio."
+		}
+	},
+	"LANGUAGES": {
+		"da": "Dansk",
+		"en": "English",
+		"es": "Español",
+		"de": "Deutsch",
+		"fr": "Français",
+		"it": "Italiano",
+        "pl": "Polski"
+	},
+	"MENU": {
+		"language": "Idioma",
+		"create_patient": "Crear paciente",
+		"show_patients": "Mostrar pacientes",
+		"drawing": "Nuevo dibujo",
+		"account": "Cuenta",
+		"log_out": "desconectar",
+		"drawings": "Dibujos",
+		"patients": "Pacientes",
+		"manager_menu": "Menú del administrador"
+	},
+	"LOGIN": {
+		"login": "Registrarse",
+		"forgot_password": "¿Se te olvidó tu contraseña?",
+		"signup_clinic": "registrar clínica ",
+		"cancel": "Cancelar",
+		"reset_password": "Restablecer la contraseña",
+		"confirm_password": "Confirmar contraseña",
+		"set_password": "Configurar la contraseña",
+		"set_password_for": "Establecer contraseña para:",
+		"confirming_email": "Confirmar el email",
+		"present_password": "Contraseña actual",
+		"new_password": "Nueva contraseña",
+		"confirm_new_password": "Confirmar nueva contraseña",
+		"back_to_login": "Volver a iniciar sesión",
+		"reset_password_by_click": "Restablezca la contraseña enviando su correo electrónico aquí:",
+		"remember_me": "Recuérdame",
+		"terms_of_service": "Términos de servicio",
+		"privacy_policy": "Política de privacidad",
+		"agree_with_terms": "<span> Al iniciar sesión, acepta nuestros <a class=\"terms\" href=\"https://app.navigatepain.com/terms.html\" target=\"_blank\"> Términos de servicio </a> y <a class = \"terms\" href = \"https://app.navigatepain.com/privacy.html\" target = \"_ blank\"> Política de privacidad </a> </ span>",
+		"register_agree_with_terms": "<span> Al registrar una clínica, acepta nuestros <a class=\"terms\" href=\"https://app.navigatepain.com/terms.html\" target=\"_blank\"> Términos de servicio </a> y < a class = \"terms\" href = \"https://app.navigatepain.com/privacy.html\" target = \"_ blank\"> Política de privacidad </a> </ span>"
+	},
+	"SIGNUP": {
+		"clinic_signup": "registrar clínica ",
+		"success": "La clínica se creó con éxito, revise su bandeja de entrada para confirmar su email.",
+		"clinic_name": "Nombre de la clínica",
+		"clinic_owner_fullname": "Nombre completo del propietario de clínica ",
+		"clinic_owner_email": "Email del propietario de la clínica",
+		"register": "Registrarse",
+		"cancel": "Cancelar",
+		"usage_interests": "Intereses de uso",
+		"clinical": "Clínico",
+		"research": "Investigación",
+		"personal": "Personal",
+		"testing": "Pruebas",
+		"other": "Otro" 
+	},
+	"PATIENT": {
+		"select_patient": "Seleccionar paciente",
+		"create_new_patient": "Crear nuevo paciente",
+		"new_drawing": "Nuevo dibujo",
+		"schedule": "Horarios",
+		"schedules": "Horarios",
+		"new_schedule": "Nuevo horario",
+		"create_new_schedule": "Crear un nuevo horario",
+		"select_existing_patient": "Seleccionar paciente existente",
+		"patient_info": "Información del paciente",
+		"charts_per_day": "Mapas corporales diarios",
+		"patient_schedules": "Editar paciente",
+		"edit_patient": "Seleccionar el idioma",
+		"select_language": "Seleccionar la zona horaria",
+		"select_timezone": "Seleccionar país",
+		"select_country": "Seleccionar país",
+		"patient_status": "Estado del paciente",
+		"reporting": "Informes",
+		"completed": "Terminado",
+		"stopped": "Detenido",
+		"no_charts": "Sin mapas corporales",
+		"change_body_chart": "Cambiar el mapa corporal",
+		"summary_optional": "Resumen (opcional)",
+		"remove_patient": "Eliminar paciente",
+		"confirm_patient_remove": "¿Seguro que quieres eliminar a este paciente de tu clínica?",
+		"patient_remove_consequences": "Esto significa que tu clínica ya no tendrá acceso a este paciente y que el paciente no puede enviar más mapas corporales a los que tiene acceso su clínica.",
+		"im_aware": "Entiendo las consecuencias."
+	},
+	"SCHEDULE": {
+		"schedule_info": "Programar el horario ",
+		"title": "Título",
+		"edit_schedule": "Editar horario",
+		"charts_per_day": "Dibujos por día",
+		"start_date": "Fecha de inicio",
+		"finish_date": "Fecha final",
+		"schedule_name": "Nombre del horario",
+		"starts_in": "Empieza en",
+		"ends_in": "Termina en",
+		"interval": "Intervalo",
+		"weekdays": "Días de la semana",
+		"select_weekdays": "Seleccionar el día de la semana",
+		"select_days": "Seleccionar fechas",
+		"timestamps": "Marcas del tiempo",
+		"select_timestamps": "Seleccionar marcas del tiempo"
+	},
+	"TOOLBOX": {
+		"pain_intensity": "Intensidad del dolor",
+	    "current": "Actual",
+		"current_pain_intensity": "Intensidad del dolor actual",
+		"usual": "Habitual",
+		"usual_pain_intensity": "Intensidad del dolor habitual",
+		"size": "Tamaño de la punta del bolígrafo",
+		"select_pain_type": "Seleccionar tipo de dolor",
+    	"select_pain_level": "Seleccionar nivel de dolor",
+		"select_body_chart": "Seleccionar el mapa corporal",
+		"submit_charts": "Enviar mapas",
+		"no_pain": "Sin dolor",
+		"worst_pain": "El peor dolor",
+		"moderate_pain": "Dolor moderado",
+		"rate_current_pain": "Califica tu dolor <b>actual</b>:",
+		"rate_usual_pain": "Califica tu dolor <b>habitual</b>:",
+		"set_pain_intensity": "Califica tu dolor, arriba"
+  },
+  "PAINTYPES": {
+    "Pain": "Dolor",
+    "Dull/Aching": "Pesado/Dolorido",
+    "Burning": "Quemazón",
+    "Throbbing": "Palpitante",
+    "Stabbing": "Punzante",
+    "Tingling": "Hormigueo",
+    "Electric": "Eléctrico",
+    "Numbness": "Entumecimiento",
+    "Cold": "Frio",
+    "Itchy": "Picor",
+    "Other": "Otro"
+  },
+  "PAIN_SEVERITY": {
+    "Mild": "Bajo",
+    "Moderate": "Moderado",
+    "Severe": "Severo"
+  },
+	"FEEDBACK": {
+		"feedback": "Comentarios",
+		"feedback_text": "Si tiene comentarios, ideas, críticas, propuestas o ideas, no dude en enviarlas aquí:",
+		"satisfaction": "¿Qué piensas de la aplicación?",
+		"not_good": "No está bien",
+		"it_could_be_better": "Podría ser mejor",
+		"neutral": "Neutral",
+		"its_cool": "Es genial",
+		"i_love_it": "Me encanta",
+		"submitted": "Comentarios enviados",
+		"error": "Error: comentarios no enviados"
+	},
+  "SUPPORT": {
+    "support": "Apoyo"
+  },
+	"INVITE": {
+		"invite": "Invita a otros",
+		"send_invitation": "Invitación enviada",
+		"invite_to_try": "Invita a tus colegas a probar Navigate Pain."
+	},
+	"PAYMENT": {
+		"payment": "Pago",
+		"welcome": "Bienvenido a Navigate Pain.",
+		"welcomes_you": "te da la bienvenida a Navigate Pain.",
+		"confirm_client_funded_model": "¿Seguro que quieres seleccionar el modelo financiado por el cliente?",
+		"pricing": "Iniciar la suscripción para acceder al servicio.",
+		"trial_period": "Período de prueba de <b> 7 </ b> días.",
+		"no_of_charts_bundles": "Guarde hasta <b> 4 </ b> paquetes de mapas por día.",
+		"no_binding": "Cancele la suscripción en cualquier momento.",
+		"stripe_stores_info": "No almacenamos ninguna información de tarjeta de crédito, utilizamos el <a href=\"https://stripe.com/docs/security/stripe\" target=\"_blank\"> portal de pago seguro segmentado </a> de confianza para manejar su información de crédito.",
+		"details": "Detalles",
+		"allowed_personnel": "Personal permitido",
+		"update_card": "Actualizar información de la tarjeta",
+		"subscription_active": "Suscripción activa",
+		"expiration_date": "Fecha de vencimiento de la suscripción",
+		"reenable_subscription": "Volver a habilitar la suscripción",
+		"cancel_subscription": "Cancelar suscripción",
+		"select_fundning_model": "Seleccione el modelo de fijación de precios para su clínica",
+		"recommended": "Recomendado",
+		"client_funded_model": "Modelo financiado por el cliente",
+		"paid_service": "Integrado como un <b> servicio pago </ b> para sus clientes",
+		"client_price": "Cada cliente paga solo <b> {{price}} / año </ b>",
+		"unlimited": "Clientes y usuarios <b> Ilimitados </ b> ",
+		"free": "Gratis",
+		"forever": "Para siempre",
+		"clinic_funded_model": "Modelo financiado por la clínica",
+		"free_service": "Integrado como <b> servicio gratuito </ b> para sus clientes",
+		"includes_users": "Incluye <b> 3 usuarios </ b>",
+		"fixed_clients": "Número de clientes y usuarios <b> Fijo </ b> ",
+		"additional_user": "por usuario adicional",
+		"no_of_users": "Número de usuarios",
+		"subscription_type": "Tipo de suscripción",
+		"trialing": "Periodo de prueba",
+		"patient_yearly": "Suscripción anual (€ 5.99)",
+		"auto_renewal": "Renovación Automática",
+		"total_price": "Precio total",
+		"description": "Suscripción anual",
+		"start_subscription": "Iniciar suscripción",
+		"update_card_info": "Actualizar tarjeta de crédito",
+		"beta": "Periodo de prueba BETA gratuito hasta el 1. de diciembre",
+		"trial_period_beta": "Período de prueba hasta el 1. de diciembre + 7 días de prueba adicionales",
+		"change_currency": "Cambiar moneda",
+		"choose_currency": "Elija una moneda",
+		"currency_nb": "NOTA: Tenga en cuenta que el pago se realiza en euros (€) y los precios que se muestran en otras monedas se basan en la tarifa de cambio de hoy."
+	},
+	"ACCOUNT": {
+		"my_account": "Mi cuenta",
+		"clinic_info": "Información clínica",
+		"payment_info": "Información del pago",
+		"credit_card": "Tarjeta de crédito",
+		"card_active_until": "La tarjeta de crédito está activa hasta el {{date}}",
+		"subscription": "Suscripción",
+		"unsubscribe": "Darse de baja",
+		"subscription_info": "Información sobre la suscripción",
+		"personnel": "Personal",
+		"add_personnel": "Añadir personal",
+		"edit_personnel": "Editar personal"
+	},
+	"CANVAS": {
+		"Front": "Frontal",
+		"Left": "Izquierda",
+		"Back": "Posterior",
+		"Right": "Derecha"
+	},
+	"TIMES": {
+		"second": "segundo",
+		"seconds": "segundos",
+		"minute": "minuto",
+		"minutes": "minutos",
+		"hour": "hora",
+		"hours": "horas",
+		"day": "día",
+		"days": "días",
+		"month": "mes",
+		"months": "meses",
+		"year": "año",
+		"years": "años",
+		"daily": "Todos los días",
+		"weekly": "Semanal",
+		"monthly": "Mensual"
+	},
+	"TIMES_AGO": {
+		"second": "hace 1 segundos",
+		"seconds": "hace {{time}} segundos",
+		"minute": "hace 1 minuto",
+		"minutes": "hace {{time}} minutos",
+		"hour": "1 hora antes",
+		"hours": "hace {{time}} horas",
+		"day": "hace 1 día",
+		"days": "hace {{time}} días",
+		"month": "hace 1 mes",
+		"months": "hace {{time}} meses",
+		"year": "hace 1 año",
+		"years": "hace {{time}} años"
+	},
+	"WEEKDAYS": {
+		"1": "lunes",
+		"2": "martes",
+		"3": "miércoles",
+		"4": "jueves",
+		"5": "viernes",
+		"6": "sábado",
+		"0": "domingo"
+	},
+	"EMAIL": {
+		"anyQuestions": "Si tiene alguna pregunta, puede contactarnos en",
+		"INVITE": {
+			"subject": "Invitación para Navigate Pain",
+			"firstLine": "{0} te invita a echar un vistazo a Navigate Pain, una aplicación de software para mapear el dolor y la incomodidad.",
+			"secondLine": "Características de la aplicación: mapas corporales de hombres, mujeres y niños; Seguimiento de la intensidad del dolor; cuantificar las áreas del dolor.",
+			"thirdLine": "Incitaciones a la clínica: controle la ubicación, el área y la intensidad del dolor a lo largo del tiempo, tal como se registra en la clínica o en el hogar del paciente. Comience cada consulta directamente sobre el tema.",
+			"buttonText": "Crear una clínica"
+		},
+		"SCHEDULE": {
+			"subject": "Recuerde dibujar su dolor",
+			"firstLine": "Hola, {0}, en nombre de {1}, aquí hay un pequeño recordatorio para que dibujes tu dolor hoy.",
+			"secondLine": "Título del programa:",
+			"thirdLine": "Obtenga acceso a Navigate Pain haciendo clic en el siguiente enlace:",
+			"buttonText": "Ir al Portal del paciente"
+		},
+		"RESET": {
+			"subject": "Restablecer la contraseña",
+			"firstLine": "Hola, recientemente solicitó restablecer la contraseña de esta cuenta de Navigate Pain:",
+			"secondLine": "Si no solicitó este cambio, infórmenos de inmediato respondiendo este email.",
+			"thirdLine": "Restablezca su contraseña haciendo clic en el siguiente enlace."
+		},
+		"CONFIRM": {
+			"subject": "Confirmar el email",
+			"firstLine": "Hola, {0} Bienvenido a Navigate Pain.",
+			"secondLine": "Por favor, confirme su dirección de email haciendo clic en el enlace a continuación.",
+			"thirdLine": "Es importante que tengamos la dirección de email correcta."
+		},
+		"CHANGE": {
+			"subject": "Confirma tu nueva dirección de email",
+			"firstLine": "Recibimos una solicitud para cambiar su dirección de email a {0}.",
+			"secondLine": "Si no solicitó este cambio, infórmenos de inmediato respondiendo este email.",
+			"thirdLine": "Su email se actualizará cuando haga clic en el botón de enlace a continuación:",
+			"buttonText": "Cambiar e-mail"
+		},
+		"SET_PASSWORD": {
+			"subject": "Configurar la contraseña",
+			"firstLine": "Hola, {0} Bienvenido a Navigate Pain.",
+			"secondLine": "{0} de {1} se creó.",
+			"thirdLine": "Por favor, configure su contraseña haciendo clic en el siguiente enlace:"
+		}
+	}
+}
