@@ -1,0 +1,590 @@
+{
+  "GLOBAL": {
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "date_of_birth": "Date of birth",
+    "year_of_birth": "Birth year",
+    "phonenumber": "Phone number",
+    "years": " years",
+    "date": "Date",
+    "gender": "Gender",
+    "template": "Body Chart",
+    "timezone": "Time zone",
+    "set_gender": "Select Gender",
+    "set_template": "Select Body Chart",
+    "Child": "Child",
+    "Male": "Male",
+    "Female": "Female",
+    "Other": "Other",
+    "search": "Search",
+    "shortCode": "NP-code",
+    "height": "Height",
+    "age": "Age",
+    "cm": "cm",
+    "weight": "Weight",
+    "kg": "kg",
+    "note_optional": "Note (optional)",
+    "note": "Note",
+    "notes": "Notes",
+    "create_patient": "Create Patient",
+    "save": "Save",
+    "delete": "Delete",
+    "remove": "Remove",
+    "disable": "Deactivate",
+    "enable": "Enable",
+    "address": "Address",
+    "city": "City",
+    "zip": "ZIP Code",
+    "country": "Country",
+    "state": "State / region",
+    "refresh": "Refresh",
+    "periode": "Period",
+    "start_date": "Start Date",
+    "end_date": "End Date",
+    "creation_date": "Creation Date",
+    "export_patient": "Export Patient",
+    "cancel": "Cancel",
+    "total_pixels": "Total number of pixels",
+    "edit": "Edit",
+    "change_password": "Change password",
+    "until": "until",
+    "close": "Close",
+    "description": "Description",
+    "submit": "Submit",
+    "change_email": "Change email",
+    "back": "Back",
+    "website": "Website",
+    "company_reg_no": "Company Registration Number",
+    "create": "Create",
+    "only_whole_numbers": "Enter the patients birth year:",
+    "show_more": "Show more",
+    "show": "Show",
+    "export": "Export",
+    "clinic": "Clinic",
+    "total": "Total",
+    "enable_chart": "Enable chart",
+    "disable_chart": "Disable chart",
+    "ago": "ago",
+    "summary": "Summary",
+    "yes": "Yes",
+    "no": "No",
+    "login_info": "Login information",
+    "select": "Select",
+    "pay": "Pay",
+    "download": "Download",
+    "end": "End",
+    "of": "of",
+    "date_format": "Date format",
+    "time_format": "Time format",
+    "discard_changes": "Discard changes",
+    "clinic_manager_access": "Clinic manager access"
+  },
+  "MESSAGES": {
+    "error": "Error",
+    "success": "Success",
+    "remember": "Remember to",
+    "dismiss": "Dismiss",
+    "something_went_wrong": "Something went wrong, try again or contact support@aglancesolutions.com.",
+    "verify_email": "Verify email",
+    "charts_successfully_saved": "Drawings successfully saved",
+    "reset_password_success": "An email has been sent to {{email}} with a link to reset your password.",
+    "verify_email_info": "An email has been sent to {{email}} with a link to confirm your email.",
+    "password_set_successfully": "Password set successfully",
+    "ininvalid_password": "Invalid password.",
+    "invalid_email": "Invalid email.",
+    "password_format": "Password format is invalid.",
+    "password_length": "Password must be at least 8 characters.",
+    "password_uppercase": "Password must contain at least one uppercase letter.",
+    "password_lowercase": "Password must contain at least one lowercase letter.",
+    "password_digit": "Password must contain at least one digit.",
+    "password_successfully_changed": "Password successfully changed.",
+    "invalid_token": "Invalid token, try to reset the password again.",
+    "email_password_incorrect": "Email or password is wrong.",
+    "user_lockedout": "This user has been deactivated. Contact your Clinic Administrator to be reactivated.",
+    "email_confirmed": "Email is confirmed.",
+    "email_not_valid": "Email format is not valid",
+    "email_not_confirmed": "Email is not confirmed.",
+    "confirm_email": "An email has been sent to {{email}}, click the link in the mail to change your email address.",
+    "email_changed": "Your email has successfully been changed to:",
+    "drawing_are_emtpy_nothing_saved": "Drawings are empty, nothing is saved.",
+    "max_40_chars": "(40 characters)",
+    "overlapping_schedules": "Overlapping drawing schedules are not allowed.",
+    "accept_cookies": "By continuing to browse the site, you agree to our use of cookies. Learn more in our",
+    "privacy_policy": "Privacy Policy",
+    "token_expired": "The token is expired, a new \"Reset password\" is sent to your email address."
+  },
+  "TABLE": {
+    "no_schedules": "No schedules.",
+    "no_patients": "No patients.",
+    "no_personnel": "No personnel.",
+    "total": "total"
+  },
+  "FORM": {
+    "valid_email": "Please enter a valid email",
+    "email_required": "Email is required",
+    "name_required": "Name is required",
+    "birthday_required": "Date of birth is required",
+    "invalid_password": "Password must contain: a lowercase letter, an uppercase letter and a digit",
+    "password_required": "Password is required",
+    "password_length": "Password must be at least 8 characters.",
+    "password_match": "Passwords do not match.",
+    "required": "Required",
+    "pattern": " pattern is wrong",
+    "change": "Change "
+  },
+  "DIALOGS": {
+    "confirm": {
+      "cancel_subscription": "Are you sure you want to cancel your subscription?",
+      "acceptButton": "Yes",
+      "cancelButton": "No"
+    },
+    "delete_promt": {
+      "schedule": "schedule",
+      "title": "Delete ",
+      "message": "Are you sure you want to delete this ",
+      "cancelButton": "Cancel",
+      "acceptButton": "Delete"
+    },
+    "more_body_charts": {
+      "title": "Only first perspective is used.",
+      "message": "You can draw on multiple body charts:",
+      "cancelButton": "Save anyways",
+      "acceptButton": "Show me the body views"
+    },
+    "start_tour": {
+      "title": "Want to take a tour?",
+      "message": "Start a short tutorial in the app.",
+      "cancelButton": "Skip",
+      "acceptButton": "Start tour"
+    },
+    "nothing_saved": {
+      "message": "You finished the tutorial. Nothing was saved from the tutorial.",
+      "closeButton": "Ok"
+    }
+  },
+  "TOOLTIP": {
+    "menu": "Menu",
+    "save": "Save",
+    "zoom": "Zoom",
+    "body_chart": "Body view",
+    "pain_type": "Pain type",
+    "pensize": "Pen size",
+    "undo": "Undo",
+    "redo": "Redo",
+    "change_language": "Change language",
+    "first": "First",
+    "previous": "Previous",
+    "play": "Play",
+    "pause": "Pause",
+    "next": "Next",
+    "last": "Last",
+    "draw": "Draw",
+    "drag": "Drag",
+    "resetZoom": "Reset zoom",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out"
+  },
+  "TOUR": {
+    "start": {
+      "title": "App tour",
+      "content": "Click the question icon to start the app tour again. Click the green arrow to begin"
+    },
+    "toggleZoom": {
+      "title": "Draw",
+      "content": "Switch between dragging the body chart and drawing on the body chart (Ctrl + D)"
+    },
+    "resetZoom": {
+      "title": "Reset size",
+      "content": "Fits the whole body chart to the screen (Ctrl + F)"
+    },
+    "zoomIn": {
+      "title": "Zoom in",
+      "content": "Expand the drawing area (+)"
+    },
+    "zoomOut": {
+      "title": "Zoom out",
+      "content": "See more of the body chart on screen (-)"
+    },
+    "redo": {
+      "title": "Redo",
+      "content": "Redo last drawing line (Ctrl + Y)"
+    },
+    "undo": {
+      "title": "Undo",
+      "content": "Undo last drawing line (Ctrl + Z)"
+    },
+    "penSize": {
+      "title": "Pensize",
+      "content": "Change the thickness of the drawing line"
+    },
+    "painType": {
+      "title": "Pain type",
+      "content": "Change between pain and types of discomfort"
+    },
+    "templates": {
+      "title": "Body view",
+      "content": "Choose front, back, left and right side body views"
+    },
+    "save": {
+      "title": "Submit all",
+      "content": "Save all the drawings you have made (Ctrl + S)"
+    },
+    "nextTemplate": {
+      "title": "Next view",
+      "content": "The top buttons allow you to switch between body views (→)"
+    },
+    "fillAreas": {
+      "title": "Drawing instructions",
+      "content": "Fill the entire area that represents the location of your pain or discomfort"
+    },
+    "tourError": {
+      "title": "No circles or outlines",
+      "content": "Outlines of areas may miss important information. Fill in all areas"
+    },
+    "patient-list": {
+      "title": "Patient list",
+      "content": "In the Patients section you can search and find all registered patients"
+    },
+    "add-patient": {
+      "title": "Add patient",
+      "content": "Create a new patient"
+    },
+    "change-language": {
+      "title": "Change language",
+      "content": "Click here to change the language"
+    },
+    "start-timeline": {
+      "title": "Timeline",
+      "content": "Click the timeline button to view current and past pain drawings"
+    },
+    "new-drawing": {
+      "title": "New drawing",
+      "content": "Create a new drawing with or for the patient"
+    },
+    "new-schedule": {
+      "title": "Create a new schedule",
+      "content": "Create a drawing schedule for a predefined time period and number of drawings per day"
+    },
+    "export-patient": {
+      "title": "Export patient",
+      "content": "Selected export of a patient's pain drawings and pixel count as a PDF"
+    },
+    "menu": {
+      "title": "Menu",
+      "content": "Click the menu button to Log out or to see additional options such as feedback and Terms of Service"
+    }
+  },
+  "LANGUAGES": {
+    "da": "Dansk",
+    "en": "English",
+    "es": "Español",
+    "de": "Deutsch",
+    "fr": "Français",
+    "it": "Italiano",
+    "pl": "Polski"
+  },
+  "MENU": {
+    "language": "Language",
+    "create_patient": "Create Patient",
+    "show_patients": "Show Patients",
+    "drawing": "New drawing",
+    "account": "Account",
+    "log_out": "Sign out",
+    "drawings": "Drawings",
+    "patients": "Patients",
+    "manager_menu": "Manager menu"
+  },
+  "LOGIN": {
+    "login": "Sign in",
+    "forgot_password": "Forgot Password?",
+    "signup_clinic": "Signup Clinic",
+    "cancel": "Cancel",
+    "reset_password": "Reset password",
+    "confirm_password": "Confirm password",
+    "set_password": "Set password",
+    "set_password_for": "Set password for: ",
+    "confirming_email": "Confirming email",
+    "present_password": "Current password",
+    "new_password": "New password",
+    "confirm_new_password": "Confirm new password",
+    "back_to_login": "Back to sign in",
+    "reset_password_by_click": "Reset password by submitting your email here:",
+    "remember_me": "Remember me",
+    "terms_of_service": "Terms of Service",
+    "privacy_policy": "Privacy Policy",
+    "agree_with_terms": "<span>By signing in you agree to our <a class=\"terms\" href=\"https://app.navigatepain.com/terms.html\" target=\"_blank\">Terms of Service</a> and <a class=\"terms\" href=\"https://app.navigatepain.com/privacy.html\" target=\"_blank\">Privacy Policy</a></span>",
+    "register_agree_with_terms": "<span>By registering a clinic you agree to our <a class=\"terms\" href=\"https://app.navigatepain.com/terms.html\" target=\"_blank\">Terms of Service</a> and <a class=\"terms\" href=\"https://app.navigatepain.com/privacy.html\" target=\"_blank\">Privacy Policy</a></span>"
+  },
+  "SIGNUP": {
+    "clinic_signup": "Signup Clinic",
+    "success": "The clinic is successfully created, check your inbox to confirm your email.",
+    "clinic_name": "Clinic Name",
+    "clinic_owner_fullname": "Clinic Owner Full name",
+    "clinic_owner_email": "Clinic Owner Email",
+    "register": "Register",
+    "cancel": "Cancel",
+    "usage_interests": "Usage Interests",
+    "clinical": "Clinical",
+    "research": "Research",
+    "personal": "Personal",
+    "testing": "Testing",
+    "other": "Other"    
+  },
+  "PATIENT": {
+    "select_patient": "Select patient",
+    "create_new_patient": "Create new patient",
+    "new_drawing": "New drawing",
+    "schedule": "Schedule",
+    "schedules": "Schedules",
+    "new_schedule": "New schedule",
+    "create_new_schedule": "Create New Schedule",
+    "select_existing_patient": "Select Existing Patient",
+    "patient_info": "Patient information",
+    "charts_per_day": "Charts per day",
+    "patient_schedules": "Schedules",
+    "edit_patient": "Edit Patient",
+    "select_language": "Select language",
+    "select_timezone": "Select time zone",
+    "select_country": "Select country",
+    "patient_status": "Patient Status",
+    "reporting": "Reporting",
+    "completed": "Completed",
+    "stopped": "Stopped",
+    "no_charts": "No charts",
+    "change_body_chart": "Change body chart",
+    "summary_optional": "Summary (optional)",
+    "remove_patient": "Remove patient",
+    "confirm_patient_remove": "Are you sure you want to remove this patient from your clinic?",
+    "patient_remove_consequences": "This means your clinic no longer will have access to this patient and the patient cannot submit charts that will be accessible by your clinic.",
+    "im_aware": "I understand the consequences."
+  },
+  "SCHEDULE": {
+    "schedule_info": "Schedule information",
+    "title": "Title",
+    "edit_schedule": "Edit schedule",
+    "charts_per_day": "Drawings per day",
+    "start_date": "Start date",
+    "finish_date": "End date",
+    "schedule_name": "Schedule name",
+    "starts_in": "Starts in ",
+    "ends_in": "Ends in ",
+    "interval": "Interval",
+    "weekdays": "Weekdays",
+    "select_weekdays": "Select weekdays",
+    "select_days": "Select dates",
+    "timestamps": "Timestamps",
+    "select_timestamps": "Select timestamps"
+  },
+  "TOOLBOX": {
+    "pain_intensity": "Pain Intensity",
+    "current": "Current",
+    "current_pain_intensity": "Current Pain Intensity",
+    "usual": "Usual",
+    "usual_pain_intensity": "Usual Pain Intensity",
+    "size": "Pen Size",
+    "select_pain_type": "Select Pain Type",
+    "select_pain_level": "Select Pain Level",
+    "select_body_chart": "Select Body Chart",
+    "submit_charts": "Submit charts",
+    "no_pain": "No pain",
+    "worst_pain": "Worst pain",
+    "moderate_pain": "Moderate pain",
+    "rate_current_pain": "Rate your <b>current</b> pain:",
+    "rate_usual_pain": "Rate your <b>usual</b> pain:",
+    "set_pain_intensity": "Rate your pain, above"
+  },
+  "AREAS" : {
+    "all": "All",
+    "head": "Head",
+    "torso": "Torso",
+    "left_arm": "Left arm",
+    "right_arm": "Right arm",
+    "left_leg": "Left leg",
+    "right_leg": "Right leg"
+  },
+  "PAINTYPES": {
+    "Pain": "Pain",
+    "Dull/Aching": "Dull/Aching",
+    "Burning": "Burning",
+    "Throbbing": "Throbbing",
+    "Stabbing": "Stabbing",
+    "Tingling": "Tingling",
+    "Electric": "Electric",
+    "Numbness": "Numbness",
+    "Cold": "Cold",
+    "Itchy": "Itchy",
+    "Other": "Other"
+  },
+  "PAIN_SEVERITY": {
+    "Mild": "Mild",
+    "Moderate": "Moderate",
+    "Severe": "Severe"
+  },
+  "FEEDBACK": {
+    "feedback": "Feedback",
+    "feedback_text": "If you have any valuable feedback, insights, critics, proposals or ideas, feel free to submit them here:",
+    "satisfaction": "What do you think about the app?",
+    "not_good": "Not good",
+    "it_could_be_better": "It could be better",
+    "neutral": "Neutral",
+    "its_cool": "It's cool",
+    "i_love_it": "I love it",
+    "submitted": "Feedback submitted",
+    "error": "Error - feedback not submitted"
+  },
+  "SUPPORT": {
+    "support": "Support"
+  },
+  "INVITE": {
+    "invite": "Invite others",
+    "send_invitation": "Send invitation",
+    "invite_to_try": "Invite your colleagues to try Navigate Pain."
+  },
+  "PAYMENT": {
+    "payment": "Payment",
+    "welcome": "Welcome to Navigate Pain.",
+    "welcomes_you": "welcomes you to Navigate Pain.",
+    "confirm_client_funded_model": "Are you sure you want to select the client-funded model?",
+    "pricing": "Start a subscription to access the service.",
+    "trial_period": "<b>7</b> days trial period.",
+    "no_of_charts_bundles": "Save up to <b>4</b> chart bundles per day.",
+    "no_binding": "Cancel subscription at any time.",
+    "stripe_stores_info": "We do not store any credit card information, we utilize the trusted <a href=\"https://stripe.com/docs/security/stripe\" target=\"_blank\">Stripe Secure Payment Portal</a> to safely handle your credit information.",
+    "details": "Details",
+    "allowed_personnel": "Allowed personnel",
+    "update_card": "Update card information",
+    "subscription_active": "Subscription active",
+    "expiration_date": "Subscription expiration date",
+    "reenable_subscription": "Reenable subscription",
+    "cancel_subscription": "Cancel subscription",
+    "select_fundning_model": "Select pricing model for your clinic",
+    "recommended": "Recommended",
+    "client_funded_model": "Client Funded Model",
+    "paid_service": "Integrated as a <b>paid service</b> for your clients",
+    "client_price": "Each client pays only <b>{{price}} / year</b>",
+    "unlimited": "<b>Unlimited</b> clients and users",
+    "free": "Free",
+    "forever": "forever",
+    "clinic_funded_model": "Clinic Funded Model",
+    "free_service": "Integrated as a <b>free service</b> for your clients",
+    "includes_users": "Includes <b>3 users</b>",
+    "fixed_clients": "<b>Fixed</b> number of clients and users",
+    "additional_user": "per additional user",
+    "no_of_users": "Number of users",
+    "subscription_type": "Subscription type",
+    "trialing": "Trial period",
+    "patient_yearly": "Yearly subscription (€ 5.99)",
+    "auto_renewal": "Automatic renewal",
+    "total_price": "Total price",
+    "description": "Yearly subscription",
+    "start_subscription": "Start subscription",
+    "update_card_info": "Update credit card",
+    "beta": "Free BETA-trial period until 31. December",
+    "trial_period_beta": "Trial period until 31. December + 7 additional trial days",
+    "change_currency": "Change currency",
+    "choose_currency": "Choose a currency",
+    "currency_nb": "NB. Note that the payment is made in Euro (€) and the prices shown in other currencies are based on today's rate."
+  },
+  "ACCOUNT": {
+    "my_account": "My Account",
+    "clinic_info": "Clinic information",
+    "payment_info": "Payment Information",
+    "credit_card": "Credit card",
+    "card_active_until": "Credit card is active until {{date}}",
+    "subscription": "Subscription",
+    "unsubscribe": "Unsubscribe",
+    "subscription_info": "Subscription Information",
+    "personnel": "Personnel",
+    "add_personnel": "Add personnel",
+    "edit_personnel": "Edit personnel"
+  },
+  "CANVAS": {
+    "Front": "Front",
+    "Left": "Left",
+    "Back": "Back",
+    "Right": "Right"
+  },
+  "TIMES": {
+    "second": "second",
+    "seconds": "seconds",
+    "minute": "minute",
+    "minutes": "minutes",
+    "hour": "hour",
+    "hours": "hours",
+    "day": "day",
+    "days": "days",
+    "month": "month",
+    "months": "months",
+    "year": "year",
+    "years": "years",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "monthly": "Monthly"
+  },
+  "TIMES_AGO": {
+    "second": "1 second ago",
+    "seconds": "{{time}} seconds ago",
+    "minute": "1 minute ago",
+    "minutes": "{{time}} minutes ago",
+    "hour": "1 hour ago",
+    "hours": "{{time}} hours ago",
+    "day": "1 day ago",
+    "days": "{{time}} days ago",
+    "month": "1 month ago",
+    "months": "{{time}} months ago",
+    "year": "1 year ago",
+    "years": "{{time}} years ago"
+  },
+  "WEEKDAYS": {
+    "1": "Monday",
+    "2": "Tuesday",
+    "3": "Wednesday",
+    "4": "Thursday",
+    "5": "Friday",
+    "6": "Saturday",
+    "0": "Sunday"
+  },
+  "EMAIL": {
+    "anyQuestions": "If you have any questions you can contact us at ",
+    "INVITE": {
+      "subject": "Invitation for Navigate Pain",
+      "firstLine": "{0} invites you to check out Navigate Pain – a software application to map pain and discomfort.",
+      "secondLine": "App features: Male, female and child body charts; Pain intensity tracking; quantified pain area.",
+      "thirdLine": "Clinic incitements: Track pain location, area and intensity over time as recorded in the clinic or the patient’s home. Start each consultation right on topic.",
+      "buttonText": "Create a Clinic"
+    },
+    "SCHEDULE": {
+      "subject": "Remember to draw your pain",
+      "firstLine": "Hi {0}, on behalf of {1} here is a little reminder for you to draw pain today.",
+      "secondLine": "Schedule title: ",
+      "thirdLine": "Get access to Navigate Pain by clicking the link below:",
+      "buttonText": "Go to Patient-Portal"
+    },
+    "RESET": {
+      "subject": "Reset Password",
+      "firstLine": "Hi, you've recently asked to reset the password for this Navigate Pain account: {0}",
+      "secondLine": "If you did not request this change, please let us know immediately by replying to this email.",
+      "thirdLine": "Reset your password by clicking the link below."
+    },
+    "CONFIRM": {
+      "subject": "Confirm Email Address",
+      "firstLine": "Hi {0}. Welcome to Navigate Pain.",
+      "secondLine": "Please confirm your email address by clicking the link below.",
+      "thirdLine": "It is important that we have the right email address."
+    },
+    "CHANGE": {
+      "subject": "Confirm your new email address",
+      "firstLine": "We received a request to change your email address to {0}.",
+      "secondLine": "If you did not request this change, please let us know immediately by replying to this email.",
+      "thirdLine": "Your email will be updated when you click the link button below:",
+      "buttonText": "Change email"
+    },
+    "SET_PASSWORD": {
+      "subject": "Set Password",
+      "firstLine": "Hi {0}. Welcome to Navigate Pain.",
+      "secondLine": "{0} from {1} created you.",
+      "thirdLine": "Please set your password by clicking the link below:"
+    }
+  }
+}
